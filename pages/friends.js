@@ -8,6 +8,7 @@ const Row = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	flex-wrap: wrap;
+	transform: translateZ(0px);
 `
 const FriendCard = styled.div`
 	margin: 8px;

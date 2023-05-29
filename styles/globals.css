@@ -30,7 +30,10 @@ html body {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
 	color: var(--text);
-	background: var(--bg);
+	/* background: var(--bg); */
+	/* Stars */
+	height: 100%;
+	overflow: hidden;
 }
 
 #__next {
@@ -40,6 +43,8 @@ html body {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
+	/* Stars */
+	overflow: scroll;
 }
 
 a {

@@ -74,6 +74,7 @@ const Row = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
+	transform: translateZ(0px);
 `
 const Description = styled.div`
 	font-size: 18px;

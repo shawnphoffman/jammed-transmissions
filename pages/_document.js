@@ -23,6 +23,9 @@ export default function Document() {
 				<Script src="https://kit.fontawesome.com/d7ccc5bb1a.js" strategy="afterInteractive" crossOrigin="anonymous" />
 			</Head>
 			<body>
+				<div id="stars"></div>
+				<div id="stars2"></div>
+				<div id="stars3"></div>
 				<Main />
 				<NextScript />
 			</body>

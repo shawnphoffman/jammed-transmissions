@@ -1,4 +1,5 @@
 import 'styles/globals.css'
+import 'styles/app.sass'
 
 import { LazyMotion } from 'framer-motion'
 import { styled } from 'linaria/react'
