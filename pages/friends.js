@@ -18,7 +18,7 @@ const FriendCard = styled.div`
 	font-weight: bold;
 
 	&:hover {
-		background: var(--jt4);
+		background: var(--jt1);
 	}
 `
 const Cover = styled.div`

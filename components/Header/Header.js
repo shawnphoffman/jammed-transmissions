@@ -12,15 +12,14 @@ const Header = () => {
 }
 const Container = styled.div`
 	margin: 24px 48px;
-	color: var(--jt3);
 	max-width: 400px;
 	width: 100%;
-	transition: filter 200ms linear;
-	will-change: filter;
-	filter: drop-shadow(1px 1px 4px #000000);
+	transition: all 200ms linear;
+	will-change: scale;
+	filter: drop-shadow(5px 5px 3px var(--jt1));
 
 	&:hover {
-		filter: drop-shadow(5px 5px 3px #000000);
+		transform: scale(1.02);
 	}
 
 	@media (max-width: 600px) {

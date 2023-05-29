@@ -18,7 +18,8 @@ const StyledLink = styled.div`
 	white-space: nowrap;
 	cursor: pointer;
 	&:hover {
-		color: var(--jt3) !important;
+		// color: var(--jt3) !important;
+		color: var(--logo1) !important;
 	}
 	&.active {
 		border-bottom: 1px solid var(--text);
@@ -32,7 +33,7 @@ const NavBar = () => {
 				<StyledLink>Home</StyledLink>
 			</ActiveLink>
 			<ActiveLink href="/friends" activeClassName="active">
-				<StyledLink>Friends of JT</StyledLink>
+				<StyledLink>Podcast Friends</StyledLink>
 			</ActiveLink>
 		</Container>
 	)
