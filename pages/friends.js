@@ -1,12 +1,33 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
+import friends from 'config/friends'
+
 //
 const Friends = ({}) => {
 	return (
 		<Details>
 			<Description>FRIENDS TBD</Description>
 			<Description>Shawn is your friend. He&apos;s the only one you need.</Description>
+
+			{friends.map((friend, i) => {
+				return (
+					<div
+						// i={i}
+						key={friend.title}
+						// title={friend.title}
+						// subtitle={friend.subtitle}
+						// link={friend.href}
+						// icon={friend.icon}
+						// cover={friend.image}
+						// bg={friend.background}
+						// color={friend.color}
+						// alert={friend.alert}
+					>
+						- {friend.title}
+					</div>
+				)
+			})}
 		</Details>
 	)
 }
