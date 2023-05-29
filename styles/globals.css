@@ -1,6 +1,6 @@
 :root {
-	--bg: #000;
-	--outline: #1d1f26;
+	--bg: #02051e;
+	--outline: #040617;
 	--text: #fff;
 	--link: #fff;
 	--linkAlt: #a0a8d9;
@@ -11,9 +11,11 @@
 	--yellow: rgb(237, 237, 55);
 
 	--logo1: #d9d9ff;
-	/* --logo1: rgb(251, 218, 70); */
-	--logo2: rgb(255, 164, 7);
-	--logo3: rgba(255, 59, 0, 1);
+
+	--jt1: #000077;
+	--jt2: #092c43;
+	--jt3: #f66e0d;
+	--jt4: #747980;
 }
 
 * {

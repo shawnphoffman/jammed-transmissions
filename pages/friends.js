@@ -3,31 +3,50 @@ import { styled } from 'linaria/react'
 
 import friends from 'config/friends'
 
+const Row = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+`
+const FriendCard = styled.div`
+	margin: 8px;
+	background: var(--jt2);
+
+	padding: 8px;
+	border-radius: 8px;
+
+	&:hover {
+		background: var(--jt3);
+	}
+`
+const Cover = styled.div`
+	width: 100%;
+	object-fit: cover;
+	// height: 94px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	color: var(--white);
+`
+
 //
 const Friends = ({}) => {
 	return (
 		<Details>
-			<Description>FRIENDS TBD</Description>
-			<Description>Shawn is your friend. He&apos;s the only one you need.</Description>
-
-			{friends.map((friend, i) => {
-				return (
-					<div
-						// i={i}
-						key={friend.title}
-						// title={friend.title}
-						// subtitle={friend.subtitle}
-						// link={friend.href}
-						// icon={friend.icon}
-						// cover={friend.image}
-						// bg={friend.background}
-						// color={friend.color}
-						// alert={friend.alert}
-					>
-						- {friend.title}
-					</div>
-				)
-			})}
+			<Description>Check out these cool podcasts.</Description>
+			<Row>
+				{friends.map(friend => {
+					return (
+						<FriendCard key={friend.title}>
+							<a href={friend.href}>
+								<Cover>{friend.title}</Cover>
+							</a>
+						</FriendCard>
+					)
+				})}
+			</Row>
 		</Details>
 	)
 }
