@@ -18,7 +18,7 @@ const StyledLink = styled.div`
 	white-space: nowrap;
 	cursor: pointer;
 	&:hover {
-		color: var(--orange1) !important;
+		color: var(--jt3) !important;
 	}
 	&.active {
 		border-bottom: 1px solid var(--text);

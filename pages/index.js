@@ -29,7 +29,7 @@ const Home = ({ appleRating, appleRatingUrl, reviews }) => {
 	return (
 		<>
 			<Details>
-				<Description>DESCRIPTION TBD</Description>
+				{/* <Description>DESCRIPTION TBD</Description> */}
 				<Ratings appleRating={appleRating} appleRatingUrl={appleRatingUrl} />
 			</Details>
 			<Row>

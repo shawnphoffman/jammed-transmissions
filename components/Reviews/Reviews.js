@@ -91,7 +91,7 @@ const Author = styled.div`
 	margin-left: 16px;
 	margin-right: 16px;
 	font-style: italic;
-	color: var(--linkAlt);
+	color: var(--jt4);
 	@media (max-width: ${smallBreakpoint}) {
 		margin-left: 8px;
 		margin-top: 8px;
@@ -105,7 +105,7 @@ const Heading = styled.div`
 `
 const Title = styled.div`
 	font-weight: bold;
-	color: var(--orange1);
+	color: var(--jt3);
 `
 const Text = styled.div`
 	font-size: 12px;

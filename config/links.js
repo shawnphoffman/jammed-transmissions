@@ -32,10 +32,10 @@ const items = [
 		href: 'https://www.instagram.com/Jammedtransmissions',
 		icon: 'fa-brands fa-instagram',
 		subtitle: '',
-		background: '#c13584',
+		background: '#E1306C',
 	},
 	{
-		title: 'Voicemails & Emails',
+		title: 'Emails',
 		href: 'mailto:comlink@jammedtransmissions.com',
 		icon: 'fa-solid fa-mailbox-flag-up',
 		subtitle: '',
@@ -67,7 +67,8 @@ const items = [
 		href: 'https://anchor.fm/s/d8972e20/podcast/rss',
 		icon: 'fa-solid fa-rss',
 		subtitle: '',
-		background: '#0000ff',
+		// background: '#ee802f',
+		background: '#f26522',
 	},
 	{
 		title: 'Goodpods',

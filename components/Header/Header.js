@@ -12,7 +12,7 @@ const Header = () => {
 }
 const Container = styled.div`
 	margin: 24px 48px;
-	color: var(--orange1);
+	color: var(--jt3);
 	max-width: 400px;
 	width: 100%;
 	transition: filter 200ms linear;

@@ -34,7 +34,7 @@ const Row = styled.div`
 	font-size: 24px;
 	/* font-weight: bold; */
 	margin: 16px;
-	color: var(--orange1);
+	color: var(--jt3);
 
 	i {
 		color: var(--white);

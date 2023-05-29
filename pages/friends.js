@@ -15,9 +15,10 @@ const FriendCard = styled.div`
 
 	padding: 8px;
 	border-radius: 8px;
+	font-weight: bold;
 
 	&:hover {
-		background: var(--jt3);
+		background: var(--jt4);
 	}
 `
 const Cover = styled.div`
@@ -40,7 +41,7 @@ const Friends = ({}) => {
 				{friends.map(friend => {
 					return (
 						<FriendCard key={friend.title}>
-							<a href={friend.href}>
+							<a href={friend.href} target="_blank" rel="noopener noreferrer">
 								<Cover>{friend.title}</Cover>
 							</a>
 						</FriendCard>
