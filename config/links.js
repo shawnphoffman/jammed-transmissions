@@ -40,6 +40,13 @@ const items = [
 		background: '#52565e',
 	},
 	{
+		title: 'TeePublic',
+		href: 'https://www.teepublic.com/user/jammed-transmissions',
+		icon: 'fak fa-teepublic',
+		subtitle: '',
+		background: '#374ECD',
+	},
+	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/p4094075-GKfo0m',
 		icon: 'fak fa-overcast fa-lg',

@@ -1,47 +1,35 @@
 import { memo } from 'react'
+import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 
 import friends from 'config/friends'
 
-const Row = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	flex-wrap: wrap;
-	transform: translateZ(0px);
-`
-const FriendCard = styled.div`
-	margin: 8px;
-	background: var(--jt2);
+// TODO Consolidate with LinkCard
+const variants = {
+	visible: i => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: i * 0.02,
+			duration: 0.2,
+			ease: 'easeIn',
+			type: 'spring',
+			stiffness: 200,
+			mass: 0.65,
+		},
+	}),
+	hidden: { opacity: 0, y: 100 },
+}
 
-	padding: 8px;
-	border-radius: 8px;
-	font-weight: bold;
-
-	&:hover {
-		background: var(--jt1);
-	}
-`
-const Cover = styled.div`
-	width: 100%;
-	object-fit: cover;
-	// height: 94px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 24px;
-	color: var(--white);
-`
-
-//
-const Friends = ({}) => {
+const Friends = () => {
 	return (
 		<Details>
 			<Description>Check out these cool podcasts.</Description>
+			<Description>TODO: Put something better here.</Description>
 			<Row>
-				{friends.map(friend => {
+				{friends.map((friend, i) => {
 					return (
-						<FriendCard key={friend.title}>
+						<FriendCard key={friend.title} initial="hidden" animate="visible" custom={i} variants={variants}>
 							<a href={friend.href} target="_blank" rel="noopener noreferrer">
 								<Cover>{friend.title}</Cover>
 							</a>
@@ -74,6 +62,40 @@ const Description = styled.div`
 	@media (max-width: ${smallBreakpoint}) {
 		font-size: 16px;
 	}
+`
+const Row = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	transform: translateZ(0px);
+	max-width: 680px;
+`
+const FriendCard = styled(m.div)`
+	min-width: 250px;
+	flex: 1 1 250px;
+	max-width: 350px;
+
+	margin: 8px;
+	background: var(--jt2);
+
+	padding: 8px;
+	border-radius: 8px;
+	font-weight: bold;
+
+	&:hover {
+		background: var(--jt1);
+	}
+`
+const Cover = styled.div`
+	width: 100%;
+	object-fit: cover;
+	// height: 94px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: var(--white);
 `
 
 export default memo(Friends)
