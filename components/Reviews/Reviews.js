@@ -91,7 +91,7 @@ const Author = styled.div`
 	margin-left: 16px;
 	margin-right: 16px;
 	font-style: italic;
-	color: var(--logo1);
+	color: var(--logo);
 	@media (max-width: ${smallBreakpoint}) {
 		margin-left: 8px;
 		margin-top: 8px;

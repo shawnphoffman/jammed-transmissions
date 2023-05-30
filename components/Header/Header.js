@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
-import LogoSvg from 'components/jt.svg'
+import LogoSvg from 'components/Header/jt2.svg'
 
 const Header = () => {
 	return (

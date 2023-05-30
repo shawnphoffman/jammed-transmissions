@@ -19,7 +19,7 @@ const StyledLink = styled.div`
 	cursor: pointer;
 	&:hover {
 		// color: var(--jt3) !important;
-		color: var(--logo1) !important;
+		color: var(--logo) !important;
 	}
 	&.active {
 		border-bottom: 1px solid var(--text);
