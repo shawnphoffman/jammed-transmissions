@@ -38,7 +38,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle, color = 'var(--white)' }
 
 const SuperContainer = styled(m.div)`
 	min-width: 250px;
-	flex: 1 1 300px;
+	flex: 1 1 250px;
 	max-width: 350px;
 `
 
@@ -54,18 +54,18 @@ const Cover = styled.div`
 	width: 100%;
 	object-fit: cover;
 	border-radius: 8px;
-	height: 64px;
+	height: 52px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 36px;
+	font-size: 32px;
 	color: var(--white);
 `
 const Data = styled.div`
 	// margin-top: 5px;
-	margin-left: 6px;
+	margin-left: 8px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 12px;
 `
 const Title = styled.h2`
 	margin: 0;
