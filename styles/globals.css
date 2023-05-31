@@ -48,7 +48,7 @@ html body {
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0px 16px 80px 16px;
+	padding: 0px 16px 0px 16px;
 	/* Stars */
 	overflow: scroll;
 }

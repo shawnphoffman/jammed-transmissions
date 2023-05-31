@@ -4,9 +4,11 @@ import 'styles/app.sass'
 import { LazyMotion } from 'framer-motion'
 import { styled } from 'linaria/react'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import Header from 'components/Header/Header'
 import NavBar from 'components/NavBar/NavBar'
+import Gonk from 'public/images/gonk@3x.png'
 
 const loadMotion = () => import('config/motion.js').then(res => res.default)
 
@@ -59,6 +61,9 @@ function App({ Component, pageProps }) {
 					</Container>
 					{/* </Layout> */}
 				</LazyMotion>
+				<GonkWrapper>
+					<Image src={Gonk} width="150" height="150" alt="" />
+				</GonkWrapper>
 			</ThemeContainer>
 		</>
 	)
@@ -71,7 +76,7 @@ const Container = styled.div`
 	width: 100%;
 	background-attachment: fixed;
 	background-size: 700px;
-	padding-bottom: 32px;
+	padding-bottom: 18px;
 `
 const Details = styled.div`
 	text-align: center;
@@ -87,6 +92,11 @@ const ThemeContainer = styled.div`
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+`
+const GonkWrapper = styled.div`
+	overflow: hidden;
+	height: 100px;
+	transform: translateZ(0px);
 `
 
 export default App
