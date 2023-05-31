@@ -1,10 +1,12 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
+import Image from 'next/image'
 
 import LinkCard from 'components/LinkCard/LinkCard'
 import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
 import items from 'config/links'
+import Gonk from 'public/images/gonk@3x.png'
 
 const dataUrl = 'https://api.shawn.party/api/jammed-transmissions/reviews'
 
@@ -53,6 +55,9 @@ const Home = ({ appleRating, appleRatingUrl, reviews }) => {
 			<Row>
 				<Reviews reviews={reviews} />
 			</Row>
+			<GonkWrapper>
+				<Image src={Gonk} width="150" height="150" alt="" />
+			</GonkWrapper>
 		</>
 	)
 }
@@ -84,6 +89,13 @@ const Description = styled.div`
 	@media (max-width: ${smallBreakpoint}) {
 		font-size: 16px;
 	}
+`
+const GonkWrapper = styled.div`
+	margin-top: 24px;
+	text-align: center;
+	overflow: hidden;
+	height: 100px;
+	transform: translateZ(0px);
 `
 
 export default memo(Home)
