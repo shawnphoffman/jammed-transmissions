@@ -15,11 +15,11 @@ const Container = styled.div`
 	max-width: 400px;
 	width: 100%;
 	transition: all 200ms linear;
-	will-change: scale;
+	will-change: scale, skew;
 	filter: drop-shadow(5px 5px 3px var(--jt1));
 
 	&:hover {
-		transform: scale(1.02);
+		transform: skew(-5deg) scale(1.02);
 	}
 
 	@media (max-width: 600px) {
