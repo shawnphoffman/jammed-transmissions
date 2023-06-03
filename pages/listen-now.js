@@ -12,7 +12,8 @@ const Friends = () => {
 				height="352"
 				frameborder="0"
 				allowfullscreen=""
-				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+				allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+				sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
 				loading="lazy"
 			></IFrame>
 		</PageDetails>
