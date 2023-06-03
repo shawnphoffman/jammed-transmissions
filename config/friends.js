@@ -4,7 +4,7 @@ const items = [
 		href: 'https://podcasts.apple.com/us/podcast/ahch-to-radio-a-star-wars-podcast/id1459562434',
 	},
 	{
-		title: 'The Bad Motivators',
+		title: 'Bad Motivators',
 		href: 'https://podcasters.spotify.com/pod/show/the-bad-motivators',
 	},
 	{
@@ -20,7 +20,7 @@ const items = [
 		href: 'https://blueharvest.rocks',
 	},
 	{
-		title: 'The Bombadcast',
+		title: 'Bombadcast',
 		href: 'https://www.youtube.com/@TheBombadcast',
 	},
 	{

@@ -33,9 +33,9 @@ const FriendCard = styled(m.div)`
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	min-width: 250px;
+	min-width: 260px;
 	flex: 1 1 250px;
-	max-width: 350px;
+	max-width: 330px;
 	max-height: 50px;
 
 	margin: 8px;
