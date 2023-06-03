@@ -2,25 +2,11 @@ import { memo } from 'react'
 import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 
-const variants = {
-	visible: i => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: i * 0.02,
-			duration: 0.2,
-			ease: 'easeIn',
-			type: 'spring',
-			stiffness: 200,
-			mass: 0.65,
-		},
-	}),
-	hidden: { opacity: 0, y: 100 },
-}
+import { cardVariants } from 'styles/animations'
 
 const LinkCard = ({ i, link, bg, icon, title, subtitle, color = 'var(--white)' }) => {
 	return (
-		<SuperContainer initial="hidden" animate="visible" custom={i} variants={variants}>
+		<SuperContainer initial="hidden" animate="visible" custom={i} variants={cardVariants}>
 			<Card whileHover={{ opacity: 1, scale: 1.05 }} whileTap={{ scale: 0.9 }}>
 				<a href={link} target="_blank" rel="noopener noreferrer">
 					<Cover style={{ background: bg, color: color }}>

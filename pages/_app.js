@@ -72,6 +72,7 @@ const Container = styled.div`
 	background-attachment: fixed;
 	background-size: 700px;
 	padding-bottom: 0px;
+	min-height: 100vh;
 `
 const Details = styled.div`
 	text-align: center;

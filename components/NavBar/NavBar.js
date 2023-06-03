@@ -32,8 +32,11 @@ const NavBar = () => {
 			<ActiveLink href="/" activeClassName="active">
 				<StyledLink>Home</StyledLink>
 			</ActiveLink>
-			<ActiveLink href="/friends" activeClassName="active">
+			{/* <ActiveLink href="/friends" activeClassName="active">
 				<StyledLink>Podcast Friends</StyledLink>
+			</ActiveLink> */}
+			<ActiveLink href="/listen-now" activeClassName="active">
+				<StyledLink>Listen Now</StyledLink>
 			</ActiveLink>
 		</Container>
 	)
