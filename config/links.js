@@ -4,13 +4,14 @@ const items = [
 		href: 'https://twitter.com/JTComlink',
 		icon: 'fa-brands fa-twitter',
 		// background: '#1d9bf0',
-		background: '#1478bc',
+		background: '#0d7ac4',
 	},
 	{
 		title: 'Twitter - Rik',
 		href: 'https://twitter.com/cadbanesbounty',
 		icon: 'fa-brands fa-twitter',
-		background: '#1478bc',
+		// background: '#1d9bf0',
+		background: '#0d7ac4',
 	},
 	{
 		title: 'Apple Podcasts',
@@ -25,7 +26,7 @@ const items = [
 		icon: 'fa-brands fa-spotify',
 		subtitle: '',
 		// background: '#1db954',
-		background: '#12883b',
+		background: '#16883e',
 	},
 	{
 		title: 'Instagram',
@@ -33,7 +34,7 @@ const items = [
 		icon: 'fa-brands fa-instagram',
 		subtitle: '',
 		// background: '#E1306C',
-		background: '#d42f67',
+		background: '#e02766',
 	},
 	{
 		title: 'Emails',
@@ -54,21 +55,24 @@ const items = [
 		href: 'https://overcast.fm/p4094075-GKfo0m',
 		icon: 'fak fa-overcast fa-lg',
 		subtitle: '',
-		background: '#fc7e0f',
+		// background: '#fc7e0f',
+		background: '#be5a01',
 	},
 	{
 		title: 'Google Play',
 		href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2phbW1lZHRyYW5zbWlzc2lvbnMvZmVlZC54bWw',
 		icon: 'fa-brands fa-google-play',
 		subtitle: '',
-		background: '#4285f4',
+		// background: '#4285f4',
+		background: '#2270f2',
 	},
 	{
 		title: 'Stitcher',
 		href: 'https://www.stitcher.com/show/1050712',
 		icon: 'fa-solid fa-waveform',
 		subtitle: '',
-		background: '#ec8900',
+		// background: '#ec8900',
+		background: '#ae6500',
 	},
 	{
 		title: 'RSS',
@@ -76,7 +80,8 @@ const items = [
 		icon: 'fa-solid fa-rss',
 		subtitle: '',
 		// background: '#ee802f',
-		background: '#f26522',
+		// background: '#f26522',
+		background: '#ee560e',
 	},
 	{
 		title: 'Goodpods',
@@ -98,7 +103,8 @@ const items = [
 		href: 'https://www.hivesocial.app/',
 		icon: 'fak fa-hive-social',
 		subtitle: '@jtcomlink',
-		background: '#d34eff',
+		// background: '#d34eff',
+		background: '#be00fd',
 	},
 	{
 		title: 'iHeart',
@@ -112,7 +118,8 @@ const items = [
 		href: 'https://pca.st/j125cwks',
 		icon: 'fak fa-pocket-casts',
 		subtitle: '',
-		background: '#F43E37',
+		// background: '#F43E37',
+		background: '#ea150d',
 	},
 	{
 		title: 'Radio Public',
@@ -126,7 +133,8 @@ const items = [
 		href: 'https://castbox.fm/podcasts/Jammed%20Transmissions:%20A%20Star%20Wars%20Podcast',
 		icon: 'fak fa-castbox',
 		subtitle: '',
-		background: '#f25c31',
+		// background: '#f25c31',
+		background: '#db3c0e',
 	},
 ]
 
