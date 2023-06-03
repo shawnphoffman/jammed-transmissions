@@ -18,12 +18,12 @@ function App({ Component, pageProps }) {
 				{/* Meta */}
 				<title>Jammed Transmissions</title>
 				<meta name="title" content="Jammed Transmissions: A Star Wars Podcast" />
-				{/* <meta name="description" content="Star Wars podcast hosted by Hawes Burkhardt and Will Whitten" /> */}
+				<meta name="description" content="A positive, listener interactive Star Wars podcast since 2018" />
 				{/* <!-- Facebook Meta Tags --> */}
 				<meta property="og:url" content="https://jammedtransmissions.com" />
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content="Jammed Transmissions: A Star Wars Podcast" />
-				{/* <meta property="og:description" content="Star Wars podcast hosted by Hawes Burkhardt and Will Whitten" /> */}
+				<meta property="og:description" content="A positive, listener interactive Star Wars podcast since 2018" />
 				{/* TODO Import this */}
 				{/* <meta property="og:image" content="https://jammedtransmissions.com/images/fb.png" /> */}
 				<meta property="og:image:width" content="1201" />
@@ -34,7 +34,7 @@ function App({ Component, pageProps }) {
 				<meta name="twitter:site" content="@JTComlink" />
 				<meta property="twitter:url" content="https://jammedtransmissions.com" />
 				<meta name="twitter:title" content="Jammed Transmissions: A Star Wars Podcast" />
-				{/* <meta name="twitter:description" content="Star Wars podcast hosted by Hawes Burkhardt and Will Whitten" /> */}
+				<meta name="twitter:description" content="A positive, listener interactive Star Wars podcast since 2018" />
 				{/* TODO Import this */}
 				{/* NOTE This image should be 1:1. Min: 144x144. Max: 4096x4096 */}
 				{/* <meta name="twitter:image" content="https://jammedtransmissions.com/images/pod-cover.jpeg" /> */}

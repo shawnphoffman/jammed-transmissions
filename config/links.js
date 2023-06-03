@@ -64,7 +64,7 @@ const items = [
 		icon: 'fa-brands fa-google-play',
 		subtitle: '',
 		// background: '#4285f4',
-		background: '#2270f2',
+		background: '#206ff2',
 	},
 	{
 		title: 'Stitcher',
@@ -81,7 +81,7 @@ const items = [
 		subtitle: '',
 		// background: '#ee802f',
 		// background: '#f26522',
-		background: '#ee560e',
+		background: '#ce4a0c',
 	},
 	{
 		title: 'Goodpods',
