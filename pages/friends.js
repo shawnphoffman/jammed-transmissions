@@ -11,7 +11,7 @@ const Friends = () => {
 	return (
 		<>
 			<PageDetails>
-				<PageDescription>Check out these cool podcasts.</PageDescription>
+				<PageDescription>Check out some of our friends</PageDescription>
 			</PageDetails>
 
 			<PageRow>
