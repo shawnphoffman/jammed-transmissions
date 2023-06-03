@@ -14,19 +14,19 @@ const items = [
 		background: '#0d7ac4',
 	},
 	{
-		title: 'Apple Podcasts',
-		href: 'https://podcasts.apple.com/us/podcast/jammed-transmissions-a-star-wars-podcast/id1445333816?itsct=podcast_box&itscg=30200&ls=1',
-		icon: 'fa-solid fa-podcast',
-		subtitle: '',
-		background: 'var(--applePodcasts)',
-	},
-	{
 		title: 'Spotify',
 		href: 'https://open.spotify.com/show/7Cxgn8198cn9rysCF8MWzo',
 		icon: 'fa-brands fa-spotify',
 		subtitle: '',
 		// background: '#1db954',
 		background: '#16883e',
+	},
+	{
+		title: 'Apple Podcasts',
+		href: 'https://podcasts.apple.com/us/podcast/jammed-transmissions-a-star-wars-podcast/id1445333816?itsct=podcast_box&itscg=30200&ls=1',
+		icon: 'fa-solid fa-podcast',
+		subtitle: '',
+		background: 'var(--applePodcasts)',
 	},
 	{
 		title: 'Instagram',
