@@ -25,7 +25,7 @@ function App({ Component, pageProps }) {
 				<meta property="og:title" content="Jammed Transmissions: A Star Wars Podcast" />
 				<meta property="og:description" content="A positive, listener interactive Star Wars podcast since 2018" />
 				{/* TODO Import this */}
-				{/* <meta property="og:image" content="https://jammedtransmissions.com/images/fb.png" /> */}
+				<meta property="og:image" content="https://jammedtransmissions.com/images/fb.png" />
 				<meta property="og:image:width" content="1201" />
 				<meta property="og:image:height" content="630" />
 
@@ -37,8 +37,8 @@ function App({ Component, pageProps }) {
 				<meta name="twitter:description" content="A positive, listener interactive Star Wars podcast since 2018" />
 				{/* TODO Import this */}
 				{/* NOTE This image should be 1:1. Min: 144x144. Max: 4096x4096 */}
-				{/* <meta name="twitter:image" content="https://jammedtransmissions.com/images/pod-cover.jpeg" /> */}
-				{/* <meta name="twitter:image:alt" content="Hawes and Will drawn as Boba Fett and Fennec Shand on Jabba's throne" /> */}
+				<meta name="twitter:image" content="https://jammedtransmissions.com/images/pod-cover.jpeg" />
+				<meta name="twitter:image:alt" content="Jammed Transmissions: A Star Wars Podcast" />
 
 				{/* <!-- Icons --> */}
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
