@@ -41,11 +41,9 @@ export default function RootLayout({ children }) {
 						<div className={styles.page}>
 							<div className={styles.header}>
 								<Image className={styles.headerLogo} alt="Jammed Transmissions" src={titleLogo} width={450} height={160} priority />
-								{/* <h1>Jammed Transmissions</h1> */}
 								<NavBar />
 							</div>
 							<div className={styles.pageDetails}>{children}</div>
-
 							<Gonk />
 						</div>
 					</div>
