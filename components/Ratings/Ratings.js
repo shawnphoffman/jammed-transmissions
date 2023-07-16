@@ -4,6 +4,8 @@ import styles from './Ratings.module.css'
 
 const dataUrl = 'https://api.shawn.party/api/jammed-transmissions/reviews'
 
+export const revalidate = 60 * 60 * 12
+
 async function getData() {
 	try {
 		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
