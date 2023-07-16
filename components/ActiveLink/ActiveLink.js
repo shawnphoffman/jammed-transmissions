@@ -1,37 +1,22 @@
-import React, { Children, useEffect, useState } from 'react'
+'use client'
+
+import React, { Children } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 const ActiveLink = ({ children, activeClassName, ...props }) => {
-	const { asPath, isReady } = useRouter()
-
+	const currentRoute = usePathname()
 	const child = Children.only(children)
 	const childClassName = child.props.className || ''
-	const [className, setClassName] = useState(childClassName)
 
-	// TODO Update this to https://github.com/vercel/next.js/blob/canary/examples/active-class-name/components/ActiveLink.tsx
-	useEffect(() => {
-		// Check if the router fields are updated client-side
-		if (isReady) {
-			// Dynamic route will be matched via props.as
-			// Static route will be matched via props.href
-			const linkPathname = new URL(props.as || props.href, location.href).pathname
+	const linkPathname = props.as || props.href
 
-			// Using URL().pathname to get rid of query and hash
-			const activePathname = new URL(asPath, location.href).pathname
-
-			const newClassName = linkPathname === activePathname ? `${childClassName} ${activeClassName}`.trim() : childClassName
-
-			if (newClassName !== className) {
-				setClassName(newClassName)
-			}
-		}
-	}, [asPath, isReady, props.as, props.href, childClassName, activeClassName, setClassName, className])
+	const newClassName = linkPathname === currentRoute ? `${childClassName} ${activeClassName}`.trim() : childClassName
 
 	return (
-		<Link {...props}>
+		<Link passHref {...props}>
 			{React.cloneElement(child, {
-				className: className || null,
+				className: newClassName || null,
 			})}
 		</Link>
 	)

@@ -1,0 +1,19 @@
+.container {
+	padding: 4px 8px;
+	margin: 4px;
+	background: var(--applePodcasts);
+	color: var(--white);
+	font-weight: bold;
+	border-radius: 8px;
+	font-size: 0.8rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.star {
+	font-size: 0.8em;
+	margin-left: 2px;
+	margin-right: 4px;
+}

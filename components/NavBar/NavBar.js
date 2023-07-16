@@ -1,44 +1,22 @@
 import { memo } from 'react'
-import { styled } from 'linaria/react'
 
 import ActiveLink from 'components/ActiveLink/ActiveLink'
 
-const Container = styled.div`
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-bottom: 8px;
-`
-
-const StyledLink = styled.div`
-	margin: 0 8px;
-	margin-bottom: 16px;
-	font-weight: bold;
-	white-space: nowrap;
-	cursor: pointer;
-	&:hover {
-		// color: var(--jt3) !important;
-		color: var(--logo) !important;
-	}
-	&.active {
-		border-bottom: 1px solid var(--text);
-	}
-`
+import styles from './NavBar.module.css'
 
 const NavBar = () => {
 	return (
-		<Container>
-			<ActiveLink href="/" activeClassName="active">
-				<StyledLink>Home</StyledLink>
+		<div className={styles.container}>
+			<ActiveLink href="/" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Home</div>
 			</ActiveLink>
-			<ActiveLink href="/friends" activeClassName="active">
-				<StyledLink>Friends</StyledLink>
+			<ActiveLink href="/friends" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Friends</div>
 			</ActiveLink>
-			<ActiveLink href="/listen-now" activeClassName="active">
-				<StyledLink>Listen Now</StyledLink>
+			<ActiveLink href="/listen-now" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Listen Now</div>
 			</ActiveLink>
-		</Container>
+		</div>
 	)
 }
 

@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 8px;
+}
+
+.styledLink {
+	margin: 0 8px;
+	margin-bottom: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.styledLink:hover {
+	color: var(--jt3) !important;
+}
+.styledLink.active {
+	border-bottom: 1px solid var(--jt3);
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	margin-top: 24px;
+	text-align: center;
+	overflow: hidden;
+	height: 100px;
+	transform: translateZ(0px);
+}

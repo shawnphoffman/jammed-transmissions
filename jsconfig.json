@@ -4,7 +4,7 @@
 		"baseUrl": "."
 	},
 	"include": [
-		"pages",
+		"app",
 		"styles",
 		"utils",
 		"components",

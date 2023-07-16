@@ -1,37 +1,36 @@
 import { memo } from 'react'
-import { styled } from 'linaria/react'
 
-const Ratings = props => {
-	if (!props || !props.appleRating) return null
+import styles from './Ratings.module.css'
 
-	return (
-		<Container href={props.appleRatingUrl || ''} target="_blank" rel="noopener noreferrer">
-			<Value>{props.appleRating}</Value>
-			<Star className="fa-solid fa-star-sharp" title="Stars" />
-			<Byline>on Apple Podcasts</Byline>
-		</Container>
-	)
+const dataUrl = 'https://api.shawn.party/api/jammed-transmissions/reviews'
+
+async function getData() {
+	try {
+		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
+		const data = await res.json()
+		const { rating, ratingsUrl } = data
+
+		return {
+			appleRating: rating,
+			appleRatingUrl: ratingsUrl,
+		}
+	} catch {
+		return {}
+	}
 }
 
-const Container = styled.a`
-	padding: 4px 8px;
-	margin: 4px;
-	background: var(--applePodcasts);
-	color: var(--white);
-	font-weight: bold;
-	border-radius: 8px;
-	font-size: 0.8rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	white-space: nowrap;
-`
-const Value = styled.div``
-const Star = styled.i`
-	font-size: 0.8em;
-	margin-left: 2px;
-	margin-right: 4px;
-`
-const Byline = styled.div``
+const Ratings = async () => {
+	const data = await getData()
+
+	if (!data || !data.appleRating) return null
+
+	return (
+		<a className={styles.container} href={data.appleRatingUrl || ''} target="_blank" rel="noopener noreferrer">
+			<div>{data.appleRating}</div>
+			<i className={`fa-solid fa-star-sharp ${styles.star}`} title="Stars" />
+			<div>on Apple Podcasts</div>
+		</a>
+	)
+}
 
 export default memo(Ratings)

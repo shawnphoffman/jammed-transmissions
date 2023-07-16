@@ -1,9 +1,6 @@
 :root {
 	--bg: #07091a;
-	--outline: #040617;
-	--text: #fff;
-	--link: #fff;
-	--linkAlt: #a0a8d9;
+	--bg2: #050b3b;
 	--white: #fff;
 	--patreon: #f96854;
 	--applePodcasts: #872ec4;
@@ -29,6 +26,10 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+html {
+	background: var(--bg);
+	background: linear-gradient(180deg, var(--bg), var(--bg2) 100%);
+}
 html body {
 	font-size: 16px;
 	padding: 0;
@@ -36,27 +37,27 @@ html body {
 	width: 100vw;
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
-	color: var(--text);
-	background-color: var(--bg);
+	color: var(--white);
 	/* Stars */
 	height: 100%;
 	overflow: hidden;
 }
 
-#__next {
+.scroller {
 	width: 100%;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
+	/* padding-bottom: 80px; */
 	/* Stars */
 	overflow: scroll;
 }
 
 a {
-	color: var(--text);
+	color: var(--white);
 	text-decoration: none;
 }
 a:hover {
-	color: var(--text);
+	color: var(--white);
 }
