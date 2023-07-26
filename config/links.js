@@ -51,6 +51,18 @@ const items = [
 		background: '#374ECD',
 	},
 	{
+		title: 'Threads',
+		href: 'https://www.threads.net/@jammedtransmissions',
+		icon: 'fak fa-threads',
+		background: '#222',
+	},
+	{
+		title: 'Bluesky',
+		href: 'https://bsky.app/profile/cadbanesbounty.bsky.social',
+		icon: 'fa-solid fa-clouds',
+		background: '#0560ff',
+	},
+	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/p4094075-GKfo0m',
 		icon: 'fak fa-overcast fa-lg',
