@@ -46,7 +46,7 @@ const Home = async () => {
 	return (
 		<>
 			<div className={styles.pageDescription}>A positive, listener interactive Star Wars podcast since 2018</div>
-			<Episodes episodes={episodes} />
+			{episodes?.length > 0 && <Episodes episodes={episodes} />}
 		</>
 	)
 }
