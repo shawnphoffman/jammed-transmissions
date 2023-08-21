@@ -8,7 +8,7 @@ const NavBar = () => {
 	return (
 		<div className={styles.container}>
 			<ActiveLink href="/" activeClassName={styles.active}>
-				<div className={styles.styledLink}>Home</div>
+				<div className={styles.styledLink}>Episodes</div>
 			</ActiveLink>
 			<ActiveLink href="/links" activeClassName={styles.active}>
 				<div className={styles.styledLink}>Links</div>
