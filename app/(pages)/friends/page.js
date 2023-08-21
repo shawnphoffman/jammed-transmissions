@@ -1,6 +1,6 @@
 import { memo } from 'react'
-import styles from 'app/Global.module.css'
 
+import styles from 'app/Global.module.css'
 import FriendCard from 'components/FriendCard/FriendCard'
 import friends from 'config/friends'
 

@@ -1,4 +1,5 @@
 import { memo } from 'react'
+
 import styles from 'app/Global.module.css'
 
 const ListenNow = ({}) => {

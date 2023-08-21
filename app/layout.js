@@ -1,12 +1,12 @@
 import 'styles/globals.css'
 import 'styles/stars.sass'
 
-import styles from 'app/Global.module.css'
-import titleLogo from 'app/title.png'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 import Script from 'next/script'
 
+import styles from 'app/Global.module.css'
+import titleLogo from 'app/title.png'
 import Gonk from 'components/Gonk/Gonk'
 import NavBar from 'components/NavBar/NavBar'
 

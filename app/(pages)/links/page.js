@@ -1,6 +1,6 @@
 import { memo } from 'react'
-import styles from 'app/Global.module.css'
 
+import styles from 'app/Global.module.css'
 import LinkCard from 'components/LinkCard/LinkCard'
 import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
