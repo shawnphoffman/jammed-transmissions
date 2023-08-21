@@ -10,6 +10,9 @@ const NavBar = () => {
 			<ActiveLink href="/" activeClassName={styles.active}>
 				<div className={styles.styledLink}>Home</div>
 			</ActiveLink>
+			<ActiveLink href="/links" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Links</div>
+			</ActiveLink>
 			<ActiveLink href="/friends" activeClassName={styles.active}>
 				<div className={styles.styledLink}>Friends</div>
 			</ActiveLink>
