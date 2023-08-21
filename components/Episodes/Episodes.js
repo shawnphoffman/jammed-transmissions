@@ -43,7 +43,7 @@ const Episodes = ({ episodes }) => {
 	}, [episodes, fuse, search])
 
 	return (
-		<div>
+		<>
 			<input className={styles.input} type="text" placeholder="Search" onChange={handleSearch} />
 			<div className={styles.episodesContainer}>
 				{(!search || search.length < 3) && episodes.map(ep => <Episode episode={ep} key={ep.guid} />)}
@@ -51,7 +51,7 @@ const Episodes = ({ episodes }) => {
 					<Episode episode={ep} key={ep.guid} />
 				))}
 			</div>
-		</div>
+		</>
 	)
 }
 

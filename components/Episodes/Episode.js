@@ -20,7 +20,7 @@ const Episodes = async ({ episode }) => {
 						Posted: {pubDate}
 					</div>
 					<Linkify>{episode.summary}</Linkify>
-					<a className={styles.link} href={styles.link}>
+					<a className={styles.link} href={episode.link}>
 						Episode Link
 					</a>
 				</div>

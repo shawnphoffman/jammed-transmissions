@@ -60,6 +60,11 @@
 	margin-left: 16px;
 	white-space: break-spaces;
 }
+@media (max-width: 720px) {
+	.summary {
+		margin-left: 0px;
+	}
+}
 
 .summary a {
 	color: var(--logo3);
