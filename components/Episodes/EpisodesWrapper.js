@@ -1,5 +1,3 @@
-'use client'
-
 import { memo } from 'react'
 import { XMLParser } from 'fast-xml-parser'
 
@@ -43,7 +41,7 @@ const EpisodesWrapper = async () => {
 
 	const { episodes } = data
 
-	if (!episodes) return null
+	if (!episodes || episodes.length < 1) return null
 
 	return <Episodes episodes={episodes} />
 }

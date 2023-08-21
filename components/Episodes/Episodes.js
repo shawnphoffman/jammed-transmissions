@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useCallback, useMemo, useState } from 'react'
+import { memo, useCallback, useEffect, useMemo, useState, useTransition } from 'react'
 import Fuse from 'fuse.js'
 
 import Episode from './Episode'
@@ -22,36 +22,36 @@ const fuseOptions = {
 }
 
 const Episodes = ({ episodes }) => {
-	const [search, setSearch] = useState()
+	const [_, startTransition] = useTransition()
+	const [search, setSearch] = useState('')
+	const [results, setResults] = useState([])
+
+	const handleSearch = useCallback(e => {
+		const value = e.target.value
+		startTransition(() => setSearch(value))
+	}, [])
 
 	const fuse = useMemo(() => {
 		return new Fuse(episodes, fuseOptions)
 	}, [episodes])
 
-	const handleSearch = useCallback(e => {
-		const value = e.target.value
-		setSearch(value)
-	}, [])
-
-	const filteredEpisodes = useMemo(() => {
-		const ep = search?.length > 2 ? fuse.search(search).map(e => e.item) : episodes
-		console.log(ep.length)
-		return ep
-	}, [search, fuse, episodes])
-
-	if (!filteredEpisodes) return null
+	useEffect(() => {
+		if (search.length >= 3) {
+			const filtered = fuse.search(search, { limit: 20 }).map(e => e.item)
+			startTransition(() => setResults(filtered))
+		}
+	}, [episodes, fuse, search])
 
 	return (
-		<>
-			<div>{search}</div>
-			<input className={styles.input} type="text" onChange={handleSearch} value={search || ''} />
+		<div>
+			<input className={styles.input} type="text" placeholder="Search" onChange={handleSearch} />
 			<div className={styles.episodesContainer}>
-				{filteredEpisodes?.length === 0 && <div>No episodes found</div>}
-				{filteredEpisodes?.map(ep => (
-					<Episode key={ep.guid} episode={ep} />
+				{(!search || search.length < 3) && episodes.map(ep => <Episode episode={ep} key={ep.guid} />)}
+				{results.map(ep => (
+					<Episode episode={ep} key={ep.guid} />
 				))}
 			</div>
-		</>
+		</div>
 	)
 }
 
