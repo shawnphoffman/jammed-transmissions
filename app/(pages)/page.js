@@ -42,7 +42,6 @@ const Home = async () => {
 
 	const { episodes } = data
 
-	if (!episodes || episodes.length < 1) return null
 	return (
 		<>
 			<div className={styles.pageDescription}>A positive, listener interactive Star Wars podcast since 2018</div>
