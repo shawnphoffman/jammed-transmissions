@@ -10,6 +10,7 @@
 		"next": "^13.4.12",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-linkify": "^1.0.0-alpha",
 		"xml2js": "^0.6.2"
 	},
 	"scripts": {

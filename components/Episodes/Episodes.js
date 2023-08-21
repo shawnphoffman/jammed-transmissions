@@ -3,6 +3,7 @@
 import { memo } from 'react'
 import { XMLParser } from 'fast-xml-parser'
 
+import Episode from './Episode'
 import styles from './Episodes.module.css'
 
 const dataUrl = 'https://anchor	.fm/s/d8972e20/podcast/rss'
@@ -20,11 +21,18 @@ async function getData() {
 
 		const parser = new XMLParser(xmlOptions)
 		const parsed = parser.parse(xml)
-		const episodes = parsed.rss.channel.item
+		const episodes = parsed.rss.channel.item.map(ep => ({
+			guid: ep.guid['#text'],
+			title: ep.title,
+			imgSrc: ep['itunes:image']['@_href'],
+			summary: ep['itunes:summary'],
+			link: ep.link,
+			pubDate: ep.pubDate,
+		}))
 
 		return {
+			raw: parsed.rss.channel.item,
 			episodes,
-			// episodes: [{ title: 'Test 1' }, { title: 'Test 2' }, { title: 'Test 3' }],
 		}
 	} catch (error) {
 		return {}
@@ -40,20 +48,13 @@ const Episodes = async () => {
 
 	console.log(episodes[0])
 
-	return episodes.map(ep => (
-		<div className={styles.container} key={ep.guid['#text']}>
-			<div>{ep.title}</div>
-			<div style={{ display: 'flex', flexDirection: 'row' }}>
-				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img src={ep['itunes:image']['@_href']} alt={ep.title} width={100} height={100} />
-				<div>
-					<div>{ep['itunes:summary']}</div>
-					<div>{ep.link}</div>
-					<div>{ep.pubDate}</div>
-				</div>
-			</div>
+	return (
+		<div className={styles.episodesContainer}>
+			{episodes.map(ep => (
+				<Episode key={ep.guid} episode={ep} />
+			))}
 		</div>
-	))
+	)
 }
 
 export default memo(Episodes)
