@@ -9,7 +9,7 @@ module.exports = {
 					['^\\u0000'],
 					['^react$', '^react', '^@?\\w'],
 					['^(@root|types|data)(/.*)'],
-					['^(components|utils|context|config|pages|hooks|styles|public)(/.*)'],
+					['^(app|components|utils|context|config|pages|hooks|styles|public)(/.*)'],
 					[('^\\.\\.(?!/?$)', '^\\.\\./?$')],
 					['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
 				],
