@@ -1,59 +1,57 @@
 'use client'
 
-import { memo } from 'react'
-import { XMLParser } from 'fast-xml-parser'
+import { memo, useCallback, useMemo, useState } from 'react'
+import Fuse from 'fuse.js'
 
 import Episode from './Episode'
 import styles from './Episodes.module.css'
 
-const dataUrl = 'https://anchor	.fm/s/d8972e20/podcast/rss'
-const xmlOptions = {
-	ignoreAttributes: false,
-	attributeNamePrefix: '@_',
+const fuseOptions = {
+	includeScore: true,
+	minMatchCharLength: 3,
+	keys: [
+		{
+			name: 'title',
+			weight: 0.7,
+		},
+		{
+			name: 'summary',
+			weight: 0.3,
+		},
+	],
 }
 
-export const revalidate = 60 * 60 * 12
+const Episodes = ({ episodes }) => {
+	const [search, setSearch] = useState()
 
-async function getData() {
-	try {
-		var res = await fetch(dataUrl)
-		var xml = await res.text()
+	const fuse = useMemo(() => {
+		return new Fuse(episodes, fuseOptions)
+	}, [episodes])
 
-		const parser = new XMLParser(xmlOptions)
-		const parsed = parser.parse(xml)
-		const episodes = parsed.rss.channel.item.map(ep => ({
-			guid: ep.guid['#text'],
-			title: ep.title,
-			imgSrc: ep['itunes:image']['@_href'],
-			summary: ep['itunes:summary'],
-			link: ep.link,
-			pubDate: ep.pubDate,
-		}))
+	const handleSearch = useCallback(e => {
+		const value = e.target.value
+		setSearch(value)
+	}, [])
 
-		return {
-			raw: parsed.rss.channel.item,
-			episodes,
-		}
-	} catch (error) {
-		return {}
-	}
-}
+	const filteredEpisodes = useMemo(() => {
+		const ep = search?.length > 2 ? fuse.search(search).map(e => e.item) : episodes
+		console.log(ep.length)
+		return ep
+	}, [search, fuse, episodes])
 
-const Episodes = async () => {
-	const data = await getData()
-
-	const { episodes } = data
-
-	if (!episodes) return null
-
-	console.log(episodes[0])
+	if (!filteredEpisodes) return null
 
 	return (
-		<div className={styles.episodesContainer}>
-			{episodes.map(ep => (
-				<Episode key={ep.guid} episode={ep} />
-			))}
-		</div>
+		<>
+			<div>{search}</div>
+			<input className={styles.input} type="text" onChange={handleSearch} value={search || ''} />
+			<div className={styles.episodesContainer}>
+				{filteredEpisodes?.length === 0 && <div>No episodes found</div>}
+				{filteredEpisodes?.map(ep => (
+					<Episode key={ep.guid} episode={ep} />
+				))}
+			</div>
+		</>
 	)
 }
 

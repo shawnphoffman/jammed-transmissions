@@ -77,3 +77,35 @@
 .link:hover {
 	color: var(--logo4);
 }
+
+.input {
+	margin: 0;
+	margin-bottom: 8px;
+	padding: 12px 16px;
+	line-height: 1.2;
+	text-align: start;
+	text-indent: 0px;
+	text-transform: none;
+	word-spacing: 0px;
+	border-style: solid;
+	border-width: 0;
+	opacity: 1;
+	flex: 1;
+	user-select: all;
+	width: 100%;
+	display: block;
+	max-width: 720px;
+	border-color: var(--gray60);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 6px;
+	flex: 0;
+}
+.input:focus {
+	outline-style: none;
+	box-shadow: none;
+}
+.input:read-only {
+	color: grey;
+	user-select: all;
+}
