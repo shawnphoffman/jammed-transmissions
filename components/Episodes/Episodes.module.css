@@ -59,6 +59,8 @@
 .summary {
 	margin-left: 16px;
 	white-space: break-spaces;
+	text-wrap: wrap;
+	text-overflow: ellipsis;
 }
 @media (max-width: 720px) {
 	.summary {
