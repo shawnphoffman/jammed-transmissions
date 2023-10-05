@@ -5,10 +5,10 @@
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^14.0.0",
-		"@testing-library/user-event": "^14.4.3",
-		"fast-xml-parser": "^4.2.7",
+		"@testing-library/user-event": "^14.5.1",
+		"fast-xml-parser": "^4.3.2",
 		"fuse.js": "^6.6.2",
-		"next": "^13.4.19",
+		"next": "^13.5.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-linkify": "^1.0.0-alpha",
@@ -33,11 +33,11 @@
 		]
 	},
 	"devDependencies": {
-		"eslint": "^8.47.0",
-		"eslint-config-next": "^13.4.19",
+		"eslint": "^8.50.0",
+		"eslint-config-next": "^13.5.4",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"sass": "^1.66.1"
+		"sass": "^1.68.0"
 	},
 	"eslintConfig": {
 		"extends": [

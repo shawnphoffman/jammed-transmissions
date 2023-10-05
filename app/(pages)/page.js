@@ -10,8 +10,8 @@ const xmlOptions = {
 	attributeNamePrefix: '@_',
 }
 
-// Revalidate every 12 hours
-export const revalidate = 60 * 60 * 12
+// Revalidate every 4 hours
+export const revalidate = 60 * 60 * 4
 
 async function getData() {
 	try {
@@ -38,7 +38,7 @@ async function getData() {
 	}
 }
 
-const Home = async () => {
+export default async function Home() {
 	const data = await getData()
 
 	const { episodes } = data
@@ -50,5 +50,3 @@ const Home = async () => {
 		</>
 	)
 }
-
-export default memo(Home)
