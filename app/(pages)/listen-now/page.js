@@ -2,6 +2,8 @@ import { memo } from 'react'
 
 import styles from 'app/Global.module.css'
 
+export const runtime = 'edge'
+
 const ListenNow = ({}) => {
 	return (
 		<div className={styles.pageDescription}>

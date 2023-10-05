@@ -6,6 +6,8 @@ import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
 import items from 'config/links'
 
+export const runtime = 'edge'
+
 const Home = ({}) => {
 	return (
 		<>

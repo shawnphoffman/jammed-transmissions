@@ -4,6 +4,8 @@ import styles from 'app/Global.module.css'
 import FriendCard from 'components/FriendCard/FriendCard'
 import friends from 'config/friends'
 
+export const runtime = 'edge'
+
 const Friends = ({}) => {
 	return (
 		<>
