@@ -10,11 +10,12 @@ const xmlOptions = {
 	attributeNamePrefix: '@_',
 }
 
+// Revalidate every 12 hours
 export const revalidate = 60 * 60 * 12
 
 async function getData() {
 	try {
-		var res = await fetch(dataUrl)
+		var res = await fetch(dataUrl, { next: { revalidate } })
 		var xml = await res.text()
 
 		const parser = new XMLParser(xmlOptions)

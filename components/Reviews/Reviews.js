@@ -9,7 +9,7 @@ export const revalidate = 60 * 60 * 12
 
 async function getData() {
 	try {
-		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
+		const res = await fetch(dataUrl, { next: { revalidate } })
 		const data = await res.json()
 		const { reviews } = data
 
