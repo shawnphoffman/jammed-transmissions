@@ -30,7 +30,7 @@ async function getData() {
 		}))
 
 		return {
-			raw: parsed.rss.channel.item,
+			// raw: parsed.rss.channel.item,
 			episodes,
 		}
 	} catch (error) {
