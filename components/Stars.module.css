@@ -1,0 +1,5 @@
+.container {
+	color: var(--yellow);
+	display: flex;
+	flex-wrap: nowrap;
+}

@@ -1,52 +1,31 @@
-import { memo } from 'react'
-import { XMLParser } from 'fast-xml-parser'
+import { Suspense } from 'react'
 
-import styles from 'app/Global.module.css'
+import { getEpisodes } from 'app/actions'
 import Episodes from 'components/Episodes/Episodes'
+import Loading from 'components/Loading'
 
-const dataUrl = 'https://anchor.fm/s/d8972e20/podcast/rss'
-const xmlOptions = {
-	ignoreAttributes: false,
-	attributeNamePrefix: '@_',
+export const revalidate = 60 * 60 // 1 hour
+export const dynamic = 'force-dynamic'
+
+const EpisodesClient = async () => {
+	const [data] = await Promise.all([
+		getEpisodes(),
+		//
+		// new Promise(resolve => setTimeout(resolve, 5000)),
+	])
+
+	return <Episodes episodes={data.episodes} />
 }
 
-// Revalidate every 4 hours
-export const revalidate = 60 * 60 * 4
-
-async function getData() {
-	try {
-		var res = await fetch(dataUrl, { next: { revalidate } })
-		var xml = await res.text()
-
-		const parser = new XMLParser(xmlOptions)
-		const parsed = parser.parse(xml)
-		const episodes = parsed.rss.channel.item.map(ep => ({
-			guid: ep.guid['#text'],
-			title: ep.title,
-			imgSrc: ep['itunes:image']['@_href'],
-			summary: ep['itunes:summary'],
-			link: ep.link,
-			pubDate: ep.pubDate,
-		}))
-
-		return {
-			// raw: parsed.rss.channel.item,
-			episodes,
-		}
-	} catch (error) {
-		return {}
-	}
-}
-
-export default async function Home() {
-	const data = await getData()
-
-	const { episodes } = data
-
+export default async function EpisodesPage() {
 	return (
 		<>
-			<div className={styles.pageDescription}>A positive, listener interactive Star Wars podcast since 2018</div>
-			{episodes?.length > 0 && <Episodes episodes={episodes} />}
+			<div className={'pageDescription'}>A positive, listener interactive Star Wars podcast since 2018</div>
+			<div className="episodesContainer">
+				<Suspense fallback={<Loading />}>
+					<EpisodesClient />
+				</Suspense>
+			</div>
 		</>
 	)
 }

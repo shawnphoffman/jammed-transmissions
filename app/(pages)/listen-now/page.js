@@ -1,14 +1,10 @@
-import { memo } from 'react'
+'use client'
 
-import styles from 'app/Global.module.css'
-
-export const runtime = 'edge'
-
-const ListenNow = ({}) => {
+export default function ListenNow() {
 	return (
-		<div className={styles.pageDescription}>
+		<div className="pageDescription">
 			<iframe
-				className={styles.iframe}
+				className="iframe"
 				src="https://open.spotify.com/embed/show/7Cxgn8198cn9rysCF8MWzo?utm_source=generator"
 				width="100%"
 				height="352"
@@ -19,5 +15,3 @@ const ListenNow = ({}) => {
 		</div>
 	)
 }
-
-export default memo(ListenNow)

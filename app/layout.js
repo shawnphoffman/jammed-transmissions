@@ -1,14 +1,13 @@
-import 'styles/globals.css'
-import 'styles/stars.sass'
+import 'app/global.css'
+import 'app/stars.css'
 
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
-import Script from 'next/script'
 
-import styles from 'app/Global.module.css'
 import titleLogo from 'app/title.png'
+import ActiveLink from 'components/ActiveLink'
 import Gonk from 'components/Gonk/Gonk'
-import NavBar from 'components/NavBar/NavBar'
+import StarBackground from 'components/StarBackground'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -25,27 +24,28 @@ export const metadata = {
 	},
 }
 
-// export const runtime = 'edge'
-
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" style={{ fontFamily: openSans.style.fontFamily }}>
 			<head>
-				{/* <!-- FontAwesome Icons --> */}
-				<Script src="https://kit.fontawesome.com/d7ccc5bb1a.js" strategy="afterInteractive" rel="preload" as="font" />
+				<script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" async defer></script>
+				<meta name="apple-itunes-app" content="app-id=1445333816" />
 			</head>
 			<body>
-				<div id="stars" className="stars"></div>
-				<div id="stars2" className="stars"></div>
-				<div id="stars3" className="stars"></div>
+				<StarBackground />
 				<div className="scroller">
-					<div className={styles.wrapper}>
-						<div className={styles.page}>
-							<div className={styles.header}>
-								<Image className={styles.headerLogo} alt="Jammed Transmissions" src={titleLogo} width={450} height={160} priority />
-								<NavBar />
+					<div className={'wrapper'}>
+						<div className={'page'}>
+							<div className={'header'}>
+								<Image className={'headerLogo'} alt="Jammed Transmissions" src={titleLogo} width={450} height={160} priority />
+								<div className="navContainer">
+									<ActiveLink href="/" label="Episodes" />
+									<ActiveLink href="/links" label="Links" />
+									<ActiveLink href="/friends" label="Friends" />
+									<ActiveLink href="/listen-now" label="Listen Now" />
+								</div>
 							</div>
-							<div className={styles.pageDetails}>{children}</div>
+							<div className={'pageDetails'}>{children}</div>
 							<Gonk />
 						</div>
 					</div>

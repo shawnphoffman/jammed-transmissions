@@ -1,0 +1,151 @@
+:root {
+	--bg: #07091a;
+	--bg2: #050b3b;
+	--white: #fff;
+	--applePodcasts: #872ec4;
+	--spotify: #16883e;
+	--yellow: rgb(237, 237, 55);
+
+	--jt1: #1e1e51;
+	--jt2: #092043;
+	--jt3: #f66e0d;
+	--jt4: #747980;
+
+	--logo7: blue;
+	--logo6: #33f;
+	--logo5: #66f;
+	--logo4: #99f;
+	--logo3: #ccf;
+	--logo2: #f0f0ff;
+
+	--logo: var(--logo3);
+}
+
+/* DEFAULTS */
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	background: var(--bg);
+	background: linear-gradient(180deg, var(--bg), var(--bg2) 100%);
+	min-height: 100vh;
+	height: 100%;
+	overflow: hidden;
+}
+html body {
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	color: var(--white);
+	height: 100%;
+	overflow: hidden;
+}
+a {
+	transition: color 150ms ease-in;
+	color: var(--jt3);
+	/* color: var(--white); */
+	text-decoration: none;
+}
+a:hover {
+	color: var(--jt3);
+	/* color: var(--white); */
+}
+
+/* USED */
+.scroller {
+	width: 100%;
+	height: 100dvh;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 16px 0px 16px;
+	overflow: scroll;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	max-width: 900px;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.pageDetails {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	gap: 1rem;
+}
+
+.pageDescription {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	width: 100%;
+	max-width: 800px;
+}
+@media screen and (max-width: 420px) {
+	.pageDescription {
+		font-size: 1rem;
+	}
+}
+
+.pageRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	transform: translateZ(0px);
+	width: 100%;
+	gap: 1rem;
+}
+
+.header {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin: 1rem;
+}
+
+.headerLogo {
+	height: auto;
+}
+
+.iframe {
+	width: 100%;
+	max-width: 660px;
+	border: none;
+}
+
+.episodesContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 720px;
+	width: 100%;
+}
+
+.navContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+}

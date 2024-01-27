@@ -1,26 +1,23 @@
-import { memo } from 'react'
-import Linkify from 'react-linkify'
+import Image from 'next/image'
 
-import styles from './Episodes.module.css'
+import styles from './Episode.module.css'
+import EpisodeSummary from './EpisodeSummary'
 
 const options = { year: 'numeric', month: 'long', day: 'numeric' }
 
-const Episodes = async ({ episode }) => {
+export default function Episode({ episode }) {
 	const pubDate = new Date(episode.pubDate).toLocaleDateString('en-US', options)
-
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>{episode.title}</h2>
-
 			<div className={styles.detailsContainer}>
-				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img src={episode.imgSrc} alt={episode.title} className={styles.cover} />
+				<Image src={episode.imgSrc} alt={episode.title} className={styles.cover} width={200} height={200} />
 				<div className={styles.summary}>
 					<div className={styles.pubDate} suppressHydrationWarning>
 						Posted: {pubDate}
 					</div>
-					<Linkify>{episode.summary}</Linkify>
-					<a className={styles.link} href={episode.link}>
+					<EpisodeSummary summary={episode.summary} />
+					<a className={styles.link} target="_blank" href={episode.link}>
 						Episode Link
 					</a>
 				</div>
@@ -28,5 +25,3 @@ const Episodes = async ({ episode }) => {
 		</div>
 	)
 }
-
-export default memo(Episodes)

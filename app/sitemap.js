@@ -7,6 +7,10 @@ export default function sitemap() {
 			lastModified: new Date(),
 		},
 		{
+			url: `${root}/links`,
+			lastModified: new Date(),
+		},
+		{
 			url: `${root}/friends`,
 			lastModified: new Date(),
 		},

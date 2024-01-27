@@ -32,8 +32,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-resources/JammedTransmissions_Logos.ai
+# misc
+/misc

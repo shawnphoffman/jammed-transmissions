@@ -1,17 +1,11 @@
-import { memo } from 'react'
+import friends from 'app/(pages)/friends/friends'
+import FriendCard from 'components/FriendCard'
 
-import styles from 'app/Global.module.css'
-import FriendCard from 'components/FriendCard/FriendCard'
-import friends from 'config/friends'
-
-export const runtime = 'edge'
-
-const Friends = ({}) => {
+export default async function Friends() {
 	return (
 		<>
-			<div className={styles.pageDescription}>Check out some of our friends</div>
-
-			<div className={styles.pageRow}>
+			<div className={'pageDescription'}>Check out some of our friends</div>
+			<div className={'pageRow'}>
 				{friends.map((friend, i) => (
 					<FriendCard key={friend.title} title={friend.title} href={friend.href} />
 				))}
@@ -19,5 +13,3 @@ const Friends = ({}) => {
 		</>
 	)
 }
-
-export default memo(Friends)

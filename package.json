@@ -3,16 +3,19 @@
 	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.17.0",
-		"@testing-library/react": "^14.0.0",
-		"@testing-library/user-event": "^14.5.1",
-		"fast-xml-parser": "^4.3.2",
+		"fast-xml-parser": "^4.3.3",
 		"fuse.js": "^6.6.2",
-		"next": "^13.5.4",
+		"next": "14.0.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-linkify": "^1.0.0-alpha",
-		"xml2js": "^0.6.2"
+		"react-linkify": "^1.0.0-alpha"
+	},
+	"devDependencies": {
+		"eslint": "^8.56.0",
+		"eslint-config-next": "^14.1.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"sass": "^1.70.0"
 	},
 	"scripts": {
 		"dev": "next dev",
@@ -30,19 +33,6 @@
 			"last 1 chrome version",
 			"last 1 firefox version",
 			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"eslint": "^8.50.0",
-		"eslint-config-next": "^13.5.4",
-		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"sass": "^1.68.0"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
 		]
 	}
 }
