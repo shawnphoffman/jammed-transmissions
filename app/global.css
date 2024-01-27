@@ -63,7 +63,8 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .wrapper {
@@ -126,6 +127,8 @@ a:hover {
 
 .headerLogo {
 	height: auto;
+	max-width: 450px;
+	width: 100%;
 }
 
 .iframe {
