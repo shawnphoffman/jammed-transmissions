@@ -11,7 +11,7 @@ const EpisodesClient = async () => {
 	const [data] = await Promise.all([
 		getEpisodes(),
 		//
-		// new Promise(resolve => setTimeout(resolve, 5000)),
+		new Promise(resolve => setTimeout(resolve, 100000)),
 	])
 
 	return <Episodes episodes={data.episodes} />
