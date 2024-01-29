@@ -39,8 +39,10 @@ export default function RootLayout({ children }) {
 							<div className={'header'}>
 								<Image className={'headerLogo'} alt="Jammed Transmissions" src={titleLogo} width={450} height={160} priority />
 								<div className="navContainer">
-									<ActiveLink href="/" label="Episodes" />
-									<ActiveLink href="/links" label="Links" />
+									<ActiveLink href="/" label="Links" />
+									<ActiveLink href="/episodes" label="Episodes" />
+									{/* <ActiveLink href="/" label="Episodes" /> */}
+									{/* <ActiveLink href="/links" label="Links" /> */}
 									<ActiveLink href="/friends" label="Friends" />
 									<ActiveLink href="/listen-now" label="Listen Now" />
 								</div>
