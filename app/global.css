@@ -152,3 +152,12 @@ a:hover {
 	justify-content: center;
 	gap: 16px;
 }
+
+.ratingsWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}

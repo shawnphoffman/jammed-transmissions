@@ -1,7 +1,8 @@
 import { Suspense } from 'react'
 
 import LinkCard from 'components/LinkCard'
-import Ratings from 'components/Ratings'
+import RatingsApple from 'components/RatingsApple'
+import RatingsSpotify from 'components/RatingsSpotify'
 import Reviews from 'components/Reviews'
 
 import items from './links'
@@ -10,9 +11,12 @@ export default async function Links() {
 	return (
 		<>
 			<div className={'pageDescription'}>A positive, listener interactive Star Wars podcast since 2018</div>
-			<Suspense>
-				<Ratings />
-			</Suspense>
+			<div className="ratingsWrapper">
+				<Suspense>
+					<RatingsApple />
+					<RatingsSpotify />
+				</Suspense>
+			</div>
 			<div className={'pageRow'}>
 				{items.map((item, i) => {
 					return (
