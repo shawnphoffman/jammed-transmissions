@@ -4,7 +4,7 @@ import { XMLParser } from 'fast-xml-parser'
 
 export async function getReviews() {
 	try {
-		const res = await fetch('https://api.shawn.party/api/jammed-transmissions/reviews', { next: { revalidate: 60 * 60 * 4 } })
+		const res = await fetch('https://api.shawn.party/api/jammed-transmissions/reviews', { next: { revalidate: 60 * 60 * 1 } })
 		const data = await res.json()
 		const { rating, ratingsUrl, reviews } = data
 
@@ -21,9 +21,10 @@ export async function getReviews() {
 export async function getSpotifyReviews() {
 	try {
 		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${'https://open.spotify.com/show/7Cxgn8198cn9rysCF8MWzo'}`, {
-			next: { revalidate: 60 * 60 * 4 },
+			next: { revalidate: 60 * 60 * 1 },
 		})
-		return await res.json()
+		const data = await res.json()
+		return data
 	} catch {
 		return {}
 	}

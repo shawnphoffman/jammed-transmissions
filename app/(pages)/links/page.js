@@ -1,9 +1,10 @@
 import { Suspense } from 'react'
 
-import items from 'app/(pages)/links/links'
 import LinkCard from 'components/LinkCard'
 import Ratings from 'components/Ratings'
 import Reviews from 'components/Reviews'
+
+import items from './links'
 
 export default async function Links() {
 	return (
