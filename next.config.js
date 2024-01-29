@@ -10,4 +10,13 @@ module.exports = {
 			},
 		],
 	},
+	async redirects() {
+		return [
+			{
+				source: '/links',
+				destination: '/',
+				permanent: true,
+			},
+		]
+	},
 }
