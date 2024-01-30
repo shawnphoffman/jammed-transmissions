@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 import styles from './ActiveLink.module.css'
 
-const ActiveLink = ({ label, href }) => {
+export default function ActiveLink({ label, href }) {
 	const currentRoute = usePathname()
 	const isActive = currentRoute === href
 	return (
@@ -14,5 +14,3 @@ const ActiveLink = ({ label, href }) => {
 		</Link>
 	)
 }
-
-export default ActiveLink

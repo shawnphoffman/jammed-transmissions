@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useState, useTransition } from 'react'
+import { memo, startTransition, Suspense, useCallback, useDeferredValue, useEffect, useMemo, useState } from 'react'
 import Fuse from 'fuse.js'
 
 import Episode from './Episode'
@@ -21,12 +21,23 @@ const fuseOptions = {
 	],
 }
 
+const EpisodeList = memo(
+	({ episodes }) => {
+		if (episodes.length === 0) return <div>No episodes found...</div>
+
+		return episodes.map(ep => <Episode episode={ep} key={ep.guid} />)
+	},
+	(prev, next) => prev.episodes.length === next.episodes.length
+)
+EpisodeList.displayName = 'EpisodeList'
+
 export default function Episodes({ episodes }) {
-	const [_, startTransition] = useTransition()
 	const [search, setSearch] = useState('')
+	const deferredSearch = useDeferredValue(search)
 	const [results, setResults] = useState([])
 
 	const handleSearch = useCallback(e => {
+		e.preventDefault()
 		const value = e.target.value
 		startTransition(() => setSearch(value))
 	}, [])
@@ -36,20 +47,19 @@ export default function Episodes({ episodes }) {
 	}, [episodes])
 
 	useEffect(() => {
-		if (search.length >= 3) {
-			const filtered = fuse.search(search, { limit: 20 }).map(e => e.item)
+		if (deferredSearch.length >= 3) {
+			const filtered = fuse.search(deferredSearch, { limit: 20 }).map(e => e.item)
 			startTransition(() => setResults(filtered))
 		}
-	}, [episodes, fuse, search])
+	}, [episodes, fuse, deferredSearch])
 
 	return (
 		<>
 			<input className={styles.input} type="text" placeholder="Search" onChange={handleSearch} />
 			<div className="episodesContainer">
-				{(!search || search.length < 3) && episodes.map(ep => <Episode episode={ep} key={ep.guid} />)}
-				{results.map(ep => (
-					<Episode episode={ep} key={ep.guid} />
-				))}
+				<Suspense>
+					<EpisodeList episodes={deferredSearch.length < 3 ? episodes : results} />
+				</Suspense>
 			</div>
 		</>
 	)
