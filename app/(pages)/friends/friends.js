@@ -90,8 +90,13 @@ const items = [
 		// type: 'podcast',
 	},
 	{
-		title: 'The Sith List ',
+		title: 'The Sith List',
 		href: 'https://sithlist.com/',
+		// type: 'podcast',
+	},
+	{
+		title: 'Just Shillin',
+		href: 'https://justshillin.com/',
 		// type: 'podcast',
 	},
 ].sort((a, b) => {
