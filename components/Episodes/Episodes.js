@@ -55,8 +55,8 @@ const Episodes = ({ episodes }) => {
 
 	return (
 		<>
-			<input className={`${styles.input} bubbled`} type="text" placeholder="Search" onChange={handleSearch} />
-			<div className={`${styles.episodesContainer} bubbled`}>
+			<input className={styles.input} type="text" placeholder="Search" onChange={handleSearch} />
+			<div className={styles.episodesContainer}>
 				<Suspense fallback={<Loading label="episodes" />}>
 					<EpisodeList episodes={filtered} />
 				</Suspense>
