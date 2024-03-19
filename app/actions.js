@@ -2,9 +2,13 @@
 
 import { XMLParser } from 'fast-xml-parser'
 
+import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
+
 export async function getReviews() {
 	try {
-		const res = await fetch('https://api.shawn.party/api/jammed-transmissions/reviews', { next: { revalidate: 60 * 60 * 1 } })
+		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
+			next: { revalidate: 60 * 60 * 1 },
+		})
 		const data = await res.json()
 		const { rating, ratingsUrl, reviews } = data
 
@@ -20,7 +24,7 @@ export async function getReviews() {
 
 export async function getSpotifyReviews() {
 	try {
-		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${'https://open.spotify.com/show/7Cxgn8198cn9rysCF8MWzo'}`, {
+		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${spotifyUrl}`, {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const data = await res.json()
@@ -32,7 +36,7 @@ export async function getSpotifyReviews() {
 
 export async function getEpisodes() {
 	try {
-		const res = await fetch('https://anchor.fm/s/d8972e20/podcast/rss', {
+		const res = await fetch(rssFeedUrl, {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const xml = await res.text()
