@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
+		"@vercel/analytics": "^1.2.2",
 		"fast-xml-parser": "^4.3.3",
 		"fuse.js": "^6.6.2",
 		"next": "14.0.4",
