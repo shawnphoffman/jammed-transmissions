@@ -55,6 +55,11 @@ const items = [
 		// type: 'podcast',
 	},
 	{
+		title: 'Now This Is Lit',
+		href: 'https://podcasters.spotify.com/pod/show/starwarslitpod',
+		// type: 'podcast',
+	},
+	{
 		title: 'Rogue Rebels',
 		href: 'https://theroguerebels.com/',
 		// type: 'podcast',
@@ -95,7 +100,7 @@ const items = [
 		// type: 'podcast',
 	},
 	{
-		title: 'Just Shillin',
+		title: `Just Shillin'`,
 		href: 'https://justshillin.com/',
 		// type: 'podcast',
 	},
