@@ -4,7 +4,7 @@ import { XMLParser } from 'fast-xml-parser'
 
 import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
-export async function getReviews() {
+export async function getAppleReviews() {
 	try {
 		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
 			next: { revalidate: 60 * 60 * 1 },
@@ -21,6 +21,8 @@ export async function getReviews() {
 		return {}
 	}
 }
+// TODO
+export const getReviews = getAppleReviews
 
 export async function getSpotifyReviews() {
 	try {
@@ -33,11 +35,31 @@ export async function getSpotifyReviews() {
 		return {}
 	}
 }
+function cleanSummary(text: string) {
+	if (!text) return ''
+
+	// const regex1 = /(Chapters|^\d{2}:\d{2}:\d{2}.*)[\r\n]?/gm
+	// text = text.replace(regex1, '')
+
+	const regex2 = /.*(?:All\ the\ goods).*/gm
+	text = text.replace(regex2, '')
+
+	// console.log(text)
+
+	// const regex3 = /\b(https?:\/\/\S+)\s+\[\1\]/g
+	// text = text.replace(regex3, '$1')
+
+	const regexFinal = /[\r\n]{3,}/g
+	text = text.replace(regexFinal, '\n').replace(/[\r\n]+\s*$/g, '')
+
+	return text
+}
 
 export async function getEpisodes() {
 	try {
+		// await new Promise(resolve => setTimeout(resolve, 5000))
 		const res = await fetch(rssFeedUrl, {
-			next: { revalidate: 60 * 60 * 1 },
+			next: { tags: ['episodes'] },
 		})
 		const xml = await res.text()
 		const parser = new XMLParser({
@@ -49,14 +71,17 @@ export async function getEpisodes() {
 			guid: ep.guid['#text'],
 			title: ep.title,
 			imgSrc: ep['itunes:image']['@_href'],
-			summary: ep['itunes:summary'],
+			summary: cleanSummary(ep['itunes:summary']),
 			link: ep.link,
 			pubDate: ep.pubDate,
 		}))
+
+		console.log('len', episodes.length)
 		return {
 			episodes,
 		}
 	} catch (error) {
-		return {}
+		console.error(error)
+		return { episodes: [] }
 	}
 }

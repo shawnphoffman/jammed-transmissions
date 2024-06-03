@@ -25,56 +25,6 @@
 	--logo: var(--logo3);
 }
 
-/* a {
-	transition: color 150ms ease-in;
-	color: var(--jt3);
-	text-decoration: none;
-}
-a:hover {
-	color: var(--jt3);
-} */
-
-.pageDescription {
-	font-size: 1.1rem;
-	line-height: 1.5;
-	width: 100%;
-	max-width: 800px;
-}
-@media screen and (max-width: 420px) {
-	.pageDescription {
-		font-size: 1rem;
-	}
-}
-
-.pageRow {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-wrap: wrap;
-	transform: translateZ(0px);
-	width: 100%;
-	gap: 1rem;
-}
-
-.iframe {
-	width: 100%;
-	max-width: 660px;
-	border: none;
-}
-
-.episodesContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 720px;
-	width: 100%;
-}
-
-.ratingsWrapper {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-	justify-content: center;
+a {
+	@apply transition-colors;
 }

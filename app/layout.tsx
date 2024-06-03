@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
 								<div className="flex flex-row flex-wrap justify-center gap-4">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/episodes" label="Episodes" />
+									{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" />}
 									<ActiveLink href="/friends" label="Friends" />
 									<ActiveLink href="/listen-now" label="Listen Now" />
 								</div>
