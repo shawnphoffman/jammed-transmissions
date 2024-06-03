@@ -1,4 +1,4 @@
-import { getSpotifyReviews } from 'app/actions'
+import { getSpotifyReviews } from '@/app/actions'
 
 import styles from './Ratings.module.css'
 

@@ -1,4 +1,4 @@
-import { getReviews } from 'app/actions'
+import { getReviews } from '@/app/actions'
 
 import styles from './Ratings.module.css'
 

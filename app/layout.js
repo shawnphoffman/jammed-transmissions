@@ -1,14 +1,14 @@
-import 'app/global.css'
-import 'app/stars.css'
+import '@/app/global.css'
+import '@/app/stars.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
-import titleLogo from 'app/title.png'
-import ActiveLink from 'components/ActiveLink'
-import Gonk from 'components/Gonk/Gonk'
-import StarBackground from 'components/StarBackground'
+import titleLogo from '@/app/title.png'
+import ActiveLink from '@/components/ActiveLink'
+import Gonk from '@/components/Gonk/Gonk'
+import StarBackground from '@/components/StarBackground'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 

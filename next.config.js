@@ -17,6 +17,16 @@ module.exports = {
 				destination: '/',
 				permanent: true,
 			},
+			{
+				source: '/studio',
+				destination: 'https://pod-content-studio.vercel.app/studio',
+				permanent: false,
+			},
+			{
+				source: '/refresh',
+				destination: '/api/revalidate/episodes',
+				permanent: true,
+			},
 		]
 	},
 }

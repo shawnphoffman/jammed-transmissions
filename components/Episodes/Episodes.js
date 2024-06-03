@@ -3,7 +3,7 @@
 import { memo, startTransition, Suspense, useCallback, useDeferredValue, useMemo, useState } from 'react'
 import Fuse from 'fuse.js'
 
-import Loading from 'components/Loading'
+import Loading from '@/components/Loading'
 
 import Episode from './Episode'
 import styles from './Episodes.module.css'
