@@ -1,5 +1,7 @@
 import '@/app/global.css'
 import '@/app/stars.css'
+// import '@/app/(pages)/icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import { Open_Sans } from 'next/font/google'
@@ -27,10 +29,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		// <html lang="en" style={{ fontFamily: openSans.style.fontFamily }}>
-		<html lang="en" className={openSans.className}>
+		<html lang="en" className={`${openSans.className} bg-gradient-to-b from-bg1 to-bg2`}>
 			<head>
-				<script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" defer></script>
 				<meta name="apple-itunes-app" content="app-id=1445333816" />
 			</head>
 			<body>
@@ -43,8 +43,6 @@ export default function RootLayout({ children }) {
 								<div className="navContainer">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/episodes" label="Episodes" />
-									{/* <ActiveLink href="/" label="Episodes" /> */}
-									{/* <ActiveLink href="/links" label="Links" /> */}
 									<ActiveLink href="/friends" label="Friends" />
 									<ActiveLink href="/listen-now" label="Listen Now" />
 								</div>
