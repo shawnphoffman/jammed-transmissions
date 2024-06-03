@@ -8,7 +8,7 @@ import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
 import titleLogo from '@/app/title.png'
-import ActiveLink from '@/components/ActiveLink'
+import ActiveLink from '@/components/core/ActiveLink'
 import StarBackground from '@/components/core/StarBackground'
 import Gonk from '@/components/Gonk/Gonk'
 
@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
 								<div className="flex flex-row flex-wrap justify-center gap-4">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/episodes" label="Episodes" />
-									{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" />}
+									{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" fuzzy />}
 									<ActiveLink href="/friends" label="Friends" />
 									<ActiveLink href="/listen-now" label="Listen Now" />
 								</div>

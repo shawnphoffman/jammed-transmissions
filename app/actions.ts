@@ -76,7 +76,6 @@ export async function getEpisodes() {
 			pubDate: ep.pubDate,
 		}))
 
-		console.log('len', episodes.length)
 		return {
 			episodes,
 		}

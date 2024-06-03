@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import LinkCard from '@/components/core/LinkCard'
 import RatingsApple from '@/components/core/RatingsApple'
 import RatingsSpotify from '@/components/core/RatingsSpotify'
-import Reviews from '@/components/Reviews'
+import Reviews from '@/components/core/Reviews'
 
 import items from './links'
 

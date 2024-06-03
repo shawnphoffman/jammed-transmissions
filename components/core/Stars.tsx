@@ -14,7 +14,7 @@ export default function Stars({ count }) {
 	}
 
 	return (
-		<div className="flex text-brand2 flex-nowrap">
+		<div className="flex text-yellow-300 flex-nowrap">
 			{solidStars}
 			{emptyStars}
 		</div>
