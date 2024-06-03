@@ -11,10 +11,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				logo3: '#ccf',
-				logo4: '#99f',
-				jt2: '#092043', // friendCardBackground
-				jt3: '#f66e0d', // links, borders, and review title
+				brand1: '#ccf',
+				brand2: '#99f',
+				brand3: '#66f',
+				brand4: '#33f',
+				brandOrange: '#f66e0d', // links, borders, and review title
 				bg1: '#07091a',
 				bg2: '#050b3b',
 			},
@@ -22,19 +23,3 @@ module.exports = {
 	},
 	plugins: [tailwindColors.default],
 }
-
-/*
-	--jt1: #1e1e51;
-	--jt2: #092043;
-	--jt3: #f66e0d;
-	--jt4: #747980;
-
-	--logo7: blue;
-	--logo6: #33f;
-	--logo5: #66f;
-	--logo4: #99f;
-	--logo3: #ccf;
-	--logo2: #f0f0ff;
-
-	--logo: var(--logo3);
-*/

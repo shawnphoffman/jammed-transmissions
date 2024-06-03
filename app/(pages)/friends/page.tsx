@@ -1,5 +1,5 @@
 import friends from '@/app/(pages)/friends/friends'
-import FriendCard from '@/components/FriendCard'
+import FriendCard from '@/components/core/FriendCard'
 
 export default async function Friends() {
 	return (

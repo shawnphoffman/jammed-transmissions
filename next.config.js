@@ -8,6 +8,10 @@ module.exports = {
 				port: '',
 				pathname: '/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.sanity.io',
+			},
 		],
 	},
 	async redirects() {

@@ -2,29 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--bg: #07091a;
-	--bg2: #050b3b;
-	--white: #fff;
-	--applePodcasts: #872ec4;
-	--spotify: #16883e;
-	--yellow: rgb(237, 237, 55);
-
-	--jt1: #1e1e51;
-	--jt2: #092043;
-	--jt3: #f66e0d;
-	--jt4: #747980;
-
-	--logo7: blue;
-	--logo6: #33f;
-	--logo5: #66f;
-	--logo4: #99f;
-	--logo3: #ccf;
-	--logo2: #f0f0ff;
-
-	--logo: var(--logo3);
-}
-
 a {
-	@apply transition-colors;
+	@apply transition-all;
 }

@@ -57,17 +57,17 @@ const Episodes = ({ episodes }) => {
 
 	return (
 		<>
-			<div className="w-full mb-4">
+			<div className="w-full mb-1">
 				<input
 					type="text"
 					id="first_name"
-					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-neutral-500 border-neutral-500 bg-neutral-900 focus:border-neutral-500 focus-visible:outline-brand2  focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
+					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-brand1 border-brand1 bg-slate-950/50 focus:border-brand1 focus-visible:outline-brand2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
 					placeholder="Search"
 					onChange={handleSearch}
 				/>
 			</div>
 
-			<div className="flex flex-col items-center w-full border-t divide-y divide-brand2 border-t-brand2">
+			<div className="flex flex-col items-center w-full gap-1">
 				<Suspense fallback={<Loading />}>
 					<EpisodeList episodes={filtered} />
 				</Suspense>

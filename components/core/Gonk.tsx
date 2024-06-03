@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
-import styles from './Gonk.module.css'
-import GonkImg from './gonk@3x.png'
+import GonkImg from './gonk.png'
 
 export default function Gonk() {
 	return (
-		<div className={styles.wrapper}>
+		<div className="mt-6 text-center overflow-hidden h-[100px]">
 			<Image src={GonkImg} width="150" height="150" alt="" />
 		</div>
 	)

@@ -8,10 +8,10 @@ const items: FriendItem[] = [
 		title: 'Ahch-To Radio',
 		href: 'https://podcasts.apple.com/us/podcast/ahch-to-radio-a-star-wars-podcast/id1459562434',
 	},
-	{
-		title: 'Bad Motivators',
-		href: 'https://podcasters.spotify.com/pod/show/the-bad-motivators',
-	},
+	// {
+	// 	title: 'Bad Motivators',
+	// 	href: 'https://podcasters.spotify.com/pod/show/the-bad-motivators',
+	// },
 	{
 		title: 'Blast Points',
 		href: 'https://blastpointspodcast.com/',
@@ -61,7 +61,7 @@ const items: FriendItem[] = [
 		href: 'https://theroguerebels.com/',
 	},
 	{
-		title: 'Scruffy Looking Podcasters',
+		title: 'Scruffy Lookin Podcasters',
 		href: 'https://scruffypodcasters.podbean.com/',
 	},
 	{
