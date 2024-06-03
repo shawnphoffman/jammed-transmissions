@@ -50,12 +50,13 @@ export default function RootLayout({ children }) {
 						<div className="flex flex-col max-w-4xl w-full min-h-dvh z-10">
 							<div className="text-center flex flex-col items-center gap-4 m-4">
 								<Image
-									className="h-auto max-w-[450px] w-full"
+									className="h-auto max-w-[450px] w-full fa-fade"
 									alt="Jammed Transmissions"
 									src={titleLogo}
 									width={450}
 									height={160}
 									priority
+									style={{ '--fa-fade-opacity': 0.85, '--fa-animation-duration': '2s' } as React.CSSProperties}
 								/>
 								<div className="flex flex-row flex-wrap justify-center gap-4">
 									<ActiveLink href="/" label="Links" />
