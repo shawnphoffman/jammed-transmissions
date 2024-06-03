@@ -7,7 +7,7 @@ export default function sitemap() {
 			lastModified: new Date(),
 		},
 		{
-			url: `${root}/links`,
+			url: `${root}/episodes`,
 			lastModified: new Date(),
 		},
 		{
@@ -16,6 +16,10 @@ export default function sitemap() {
 		},
 		{
 			url: `${root}/listen-now`,
+			lastModified: new Date(),
+		},
+		{
+			url: `${root}/updates`,
 			lastModified: new Date(),
 		},
 	]

@@ -25,40 +25,14 @@
 	--logo: var(--logo3);
 }
 
-/* DEFAULTS */
-* {
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
-}
-
-html {
-	/* background: var(--bg); */
-	/* background: linear-gradient(180deg, var(--bg), var(--bg2) 100%); */
-	min-height: 100vh;
-	height: 100%;
-	overflow: hidden;
-}
-html body {
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
-	color: var(--white);
-	height: 100%;
-	overflow: hidden;
-}
-a {
+/* a {
 	transition: color 150ms ease-in;
 	color: var(--jt3);
-	/* color: var(--white); */
 	text-decoration: none;
 }
 a:hover {
 	color: var(--jt3);
-	/* color: var(--white); */
-}
+} */
 
 /* USED */
 .scroller {

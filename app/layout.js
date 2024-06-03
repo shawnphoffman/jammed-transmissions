@@ -1,6 +1,6 @@
 import '@/app/global.css'
-import '@/app/stars.css'
-// import '@/app/(pages)/icons'
+import '@/app/(pages)/pages.css'
+import '@/app/(pages)/icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
@@ -9,8 +9,8 @@ import Image from 'next/image'
 
 import titleLogo from '@/app/title.png'
 import ActiveLink from '@/components/ActiveLink'
+import StarBackground from '@/components/core/StarBackground'
 import Gonk from '@/components/Gonk/Gonk'
-import StarBackground from '@/components/StarBackground'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -29,11 +29,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${openSans.className} bg-gradient-to-b from-bg1 to-bg2`}>
+		<html
+			lang="en"
+			className={`${openSans.className} bg-gradient-to-b from-bg1 to-bg2 min-h-dvh h-full overflow-hidden p-0 m-0 w-dvw text-white`}
+		>
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1445333816" />
 			</head>
-			<body>
+			<body className="h-full overflow-hidden w-dvw">
 				<StarBackground />
 				<div className="scroller">
 					<div className={'wrapper'}>
