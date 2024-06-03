@@ -34,45 +34,6 @@ a:hover {
 	color: var(--jt3);
 } */
 
-/* USED */
-.scroller {
-	width: 100%;
-	height: 100dvh;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0px 16px 0px 16px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
-.wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 1200px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.page {
-	display: flex;
-	flex-direction: column;
-	max-width: 900px;
-	width: 100%;
-	min-height: 100vh;
-	z-index: 1;
-}
-
-.pageDetails {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex: 1;
-	gap: 1rem;
-}
-
 .pageDescription {
 	font-size: 1.1rem;
 	line-height: 1.5;
@@ -95,21 +56,6 @@ a:hover {
 	gap: 1rem;
 }
 
-.header {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1rem;
-	margin: 1rem;
-}
-
-.headerLogo {
-	height: auto;
-	max-width: 450px;
-	width: 100%;
-}
-
 .iframe {
 	width: 100%;
 	max-width: 660px;
@@ -122,14 +68,6 @@ a:hover {
 	align-items: center;
 	max-width: 720px;
 	width: 100%;
-}
-
-.navContainer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 16px;
 }
 
 .ratingsWrapper {
