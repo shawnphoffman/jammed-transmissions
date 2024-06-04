@@ -6,6 +6,17 @@ import YoutubeEmbed from './portableText/YoutubeEmbed'
 import styles from './PostBody.module.css'
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+	marks: {
+		textRed: ({ children }) => {
+			return <span className="text-red-400">{children}</span>
+		},
+		textBlue: ({ children }) => {
+			return <span className="text-brand2">{children}</span>
+		},
+		textGreen: ({ children }) => {
+			return <span className="text-green-400">{children}</span>
+		},
+	},
 	types: {
 		image: ({ value }) => {
 			return <PostImage {...value} />

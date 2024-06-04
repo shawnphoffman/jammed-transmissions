@@ -45,10 +45,11 @@ export default function RootLayout({ children }) {
 			</head>
 			<body className="h-full overflow-hidden w-dvw">
 				<StarBackground />
-				<div className="w-full h-dvh mx-auto px-4 overflow-y-scroll overflow-x-hidden">
-					<div className="flex flex-col items-center max-w-screen-xl w-full mx-auto">
-						<div className="flex flex-col max-w-4xl w-full min-h-dvh z-10">
-							<div className="text-center flex flex-col items-center gap-4 m-4">
+				<div className="w-full px-4 mx-auto overflow-x-hidden overflow-y-scroll h-dvh">
+					<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
+						<div className="z-10 flex flex-col w-full max-w-4xl min-h-dvh">
+							<div className="flex flex-col items-center gap-4 m-4 text-center">
+								<h1 className="sr-only">{title}</h1>
 								<Image
 									className="h-auto max-w-[450px] w-full fa-fade"
 									alt="Jammed Transmissions"
@@ -66,7 +67,7 @@ export default function RootLayout({ children }) {
 									<ActiveLink href="/listen-now" label="Listen Now" />
 								</div>
 							</div>
-							<div className="text-center flex flex-col items-center flex-1 gap-4">{children}</div>
+							<div className="flex flex-col items-center flex-1 gap-4 text-center">{children}</div>
 							<Gonk />
 						</div>
 					</div>
