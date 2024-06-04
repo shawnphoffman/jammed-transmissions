@@ -20,7 +20,7 @@ export default function PostCoverImage(props: CoverImageProps) {
 			width={2000}
 			height={1000}
 			alt={image.alt || ''}
-			src={urlForSanityImage(image).width(1792).url()}
+			src={urlForSanityImage(image).width(1792).height(1000).url()}
 			sizes="100vw"
 			priority={priority}
 		/>

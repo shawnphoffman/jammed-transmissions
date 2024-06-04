@@ -32,7 +32,7 @@ export default async function PostPage({ params }: PageProps) {
 
 			<PostCoverImage title={title} image={mainImage} priority />
 
-			<article className="w-full mb-8 text-left rounded-lg bg-slate-950/75">
+			<article className="w-full pb-4 text-left rounded-lg bg-slate-950/75">
 				<PostBody content={body} />
 			</article>
 		</div>
