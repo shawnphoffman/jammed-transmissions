@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
 									priority
 									style={{ '--fa-fade-opacity': 0.85, '--fa-animation-duration': '2s' } as React.CSSProperties}
 								/>
-								<div className="flex flex-row flex-wrap justify-center gap-4">
+								<div className="flex flex-row flex-wrap justify-center gap-x-4 gap-y-1">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/episodes" label="Episodes" />
 									{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" fuzzy />}
