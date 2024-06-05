@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import EpisodeSummary from './EpisodeSummary'
 
-const options = { year: 'numeric', month: 'long', day: 'numeric' } as const
+const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'America/Los_Angeles' } as const
 
 export default function Episodes({ episode }) {
 	const pubDate = new Date(episode.pubDate).toLocaleDateString('en-US', options)
