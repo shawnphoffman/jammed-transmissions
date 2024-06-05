@@ -51,13 +51,13 @@ const PostImage = (props: PostImageProps) => {
 				}}
 				controller={{ closeOnBackdropClick: true }}
 				animation={{ fade: 250 }}
-				on={{
-					view: index => console.log('View', index),
-					entering: () => console.log('Entering'),
-					entered: () => console.log('Entered'),
-					exiting: () => console.log('Exiting'),
-					exited: () => console.log('Exited'),
-				}}
+				// on={{
+				// 	view: index => console.log('View', index),
+				// 	entering: () => console.log('Entering'),
+				// 	entered: () => console.log('Entered'),
+				// 	exiting: () => console.log('Exiting'),
+				// 	exited: () => console.log('Exited'),
+				// }}
 				render={{
 					buttonPrev: () => null,
 					buttonNext: () => null,
