@@ -1,14 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import classnames from 'classnames'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
-
 import Lightbox from 'yet-another-react-lightbox'
 
 import sanityClient from '@/sanity/sanity.client'
-import { useState } from 'react'
 
 interface PostImageProps {
 	asset: SanityImageSource
@@ -24,14 +23,15 @@ const PostImage = (props: PostImageProps) => {
 
 	if (!imageProps) return null
 
-	// console.log('imageProps', imageProps)
-
 	return (
 		<figure className="flex flex-col items-center justify-center">
 			<Image
 				alt={''}
 				sizes="(max-width: 800px) 100vw, 800px"
-				className={classnames('mw-full h-auto hover:cursor-pointer hover:outline outline-brand3 outline-offset-2', props.className)}
+				className={classnames(
+					'mw-full h-auto max-h-96 aspect-auto w-auto mx-auto hover:cursor-pointer hover:outline outline-brand3 outline-offset-2',
+					props.className
+				)}
 				onClick={() => setOpen(true)}
 				{...imageProps}
 			/>
@@ -51,13 +51,6 @@ const PostImage = (props: PostImageProps) => {
 				}}
 				controller={{ closeOnBackdropClick: true }}
 				animation={{ fade: 250 }}
-				// on={{
-				// 	view: index => console.log('View', index),
-				// 	entering: () => console.log('Entering'),
-				// 	entered: () => console.log('Entered'),
-				// 	exiting: () => console.log('Exiting'),
-				// 	exited: () => console.log('Exited'),
-				// }}
 				render={{
 					buttonPrev: () => null,
 					buttonNext: () => null,
