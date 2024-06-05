@@ -22,7 +22,7 @@ const PostImage = (props: PostImageProps) => {
 	if (!imageProps) return null
 
 	return (
-		<figure>
+		<figure className="flex flex-col items-center justify-center">
 			<Image
 				alt={alt}
 				//
