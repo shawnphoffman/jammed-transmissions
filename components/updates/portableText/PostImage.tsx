@@ -5,29 +5,34 @@ import classnames from 'classnames'
 import Image from 'next/image'
 import { useNextSanityImage } from 'next-sanity-image'
 
+import Lightbox from 'yet-another-react-lightbox'
+
 import sanityClient from '@/sanity/sanity.client'
+import { useState } from 'react'
 
 interface PostImageProps {
 	asset: SanityImageSource
-	alt: string
 	caption?: string
 	className?: string
 }
 
 const PostImage = (props: PostImageProps) => {
-	const { asset, alt, caption } = props
+	const { asset, caption } = props
+	const [open, setOpen] = useState(false)
 
 	const imageProps = useNextSanityImage(sanityClient, asset)
 
 	if (!imageProps) return null
 
+	// console.log('imageProps', imageProps)
+
 	return (
 		<figure className="flex flex-col items-center justify-center">
 			<Image
-				alt={alt}
-				//
+				alt={''}
 				sizes="(max-width: 800px) 100vw, 800px"
-				className={classnames('mw-full h-auto', props.className)}
+				className={classnames('mw-full h-auto hover:cursor-pointer hover:outline outline-brand3 outline-offset-2', props.className)}
+				onClick={() => setOpen(true)}
 				{...imageProps}
 			/>
 			{caption && (
@@ -36,6 +41,28 @@ const PostImage = (props: PostImageProps) => {
 					{caption}
 				</figcaption>
 			)}
+			<Lightbox
+				open={open}
+				close={() => setOpen(false)}
+				slides={[imageProps]}
+				carousel={{
+					preload: 2,
+					imageFit: 'contain',
+				}}
+				controller={{ closeOnBackdropClick: true }}
+				animation={{ fade: 250 }}
+				on={{
+					view: index => console.log('View', index),
+					entering: () => console.log('Entering'),
+					entered: () => console.log('Entered'),
+					exiting: () => console.log('Exiting'),
+					exited: () => console.log('Exited'),
+				}}
+				render={{
+					buttonPrev: () => null,
+					buttonNext: () => null,
+				}}
+			/>
 		</figure>
 	)
 }

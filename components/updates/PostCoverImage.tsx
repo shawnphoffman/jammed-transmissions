@@ -19,7 +19,7 @@ export default function PostCoverImage(props: CoverImageProps) {
 			className="w-full h-auto rounded-xl"
 			width={2000}
 			height={1000}
-			alt={image.alt || ''}
+			alt={''}
 			src={urlForSanityImage(image).width(1792).height(1000).url()}
 			sizes="100vw"
 			priority={priority}

@@ -29,7 +29,8 @@
 		"react-player": "^2.16.0",
 		"server-only": "^0.0.1",
 		"sharp": "^0.33.4",
-		"typescript": "^5.4.5"
+		"typescript": "^5.4.5",
+		"yet-another-react-lightbox": "^3.19.0"
 	},
 	"devDependencies": {
 		"@shawnphoffman/eslint-config": "^1.0.4",
