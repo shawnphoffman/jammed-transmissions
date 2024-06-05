@@ -64,7 +64,7 @@ const Episodes = ({ episodes }) => {
 				<input
 					type="text"
 					id="search"
-					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-brand1 border-brand1 bg-slate-950/50 focus:border-brand1 focus-visible:outline-brand2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
+					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-brand-shade-1 border-brand-shade-1 bg-slate-950/50 focus:border-brand-shade-1 focus-visible:outline-brand-shade-2 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
 					placeholder="Search"
 					onChange={handleSearch}
 				/>

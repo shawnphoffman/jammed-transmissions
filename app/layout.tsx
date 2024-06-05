@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html
 			lang="en"
-			className={`${openSans.className} bg-gradient-to-b from-bg1 to-bg2 min-h-dvh h-full overflow-hidden p-0 m-0 w-dvw text-white`}
+			className={`${openSans.className} bg-gradient-to-b from-brand-background-dark to-brand-background-light min-h-dvh h-full overflow-hidden p-0 m-0 w-dvw text-white`}
 		>
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1445333816" />

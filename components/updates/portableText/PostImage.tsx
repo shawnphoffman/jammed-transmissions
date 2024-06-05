@@ -29,7 +29,7 @@ const PostImage = (props: PostImageProps) => {
 				alt={''}
 				sizes="(max-width: 800px) 100vw, 800px"
 				className={classnames(
-					'mw-full h-auto max-h-96 aspect-auto w-auto mx-auto hover:cursor-pointer hover:outline outline-brand3 outline-offset-2',
+					'mw-full h-auto max-h-96 aspect-auto w-auto mx-auto hover:cursor-pointer hover:outline outline-brand-shade-3 outline-offset-2',
 					props.className
 				)}
 				onClick={() => setOpen(true)}

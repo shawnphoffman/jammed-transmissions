@@ -20,18 +20,18 @@
 		@apply mb-4 font-bold !leading-normal;
 	}
 	h2 {
-		@apply mt-8 text-3xl text-brand1;
-		/* @apply text-transparent bg-gradient-to-b from-white to-brand2 bg-clip-text; */
+		@apply mt-8 text-3xl text-brand-shade-1;
+		/* @apply text-transparent bg-gradient-to-b from-white to-brand-shade-2 bg-clip-text; */
 		@apply md:text-4xl;
 	}
 	h3 {
-		@apply mt-6 text-2xl text-brand2;
-		/* @apply text-transparent bg-gradient-to-b from-white to-brand3 bg-clip-text; */
+		@apply mt-6 text-2xl text-brand-shade-2;
+		/* @apply text-transparent bg-gradient-to-b from-white to-brand-shade-3 bg-clip-text; */
 		@apply md:text-3xl;
 	}
 	h4 {
-		@apply mt-4 text-xl text-brand3;
-		/* @apply text-transparent bg-gradient-to-b from-brand1 to-brand3 bg-clip-text; */
+		@apply mt-4 text-xl text-brand-shade-3;
+		/* @apply text-transparent bg-gradient-to-b from-brand-shade-1 to-brand-shade-3 bg-clip-text; */
 		@apply md:text-2xl;
 	}
 
@@ -39,7 +39,7 @@
 	/* TEXT */
 	/* ================== */
 	blockquote {
-		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-white border-s-4 border-brand2 bg-bg1/75;
+		@apply p-4 my-4 text-xl italic font-medium leading-relaxed text-white border-s-4 border-brand-shade-2 bg-white/5;
 	}
 
 	/* ================== */
@@ -64,6 +64,6 @@
 	/* LINKS */
 	/* ================== */
 	a {
-		@apply transition-all text-brand1 hover:text-brand2 hover:underline;
+		@apply transition-all text-brand-shade-1 hover:text-brand-shade-2 hover:underline;
 	}
 }

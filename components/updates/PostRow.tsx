@@ -31,7 +31,7 @@ export default function PostRow({ post }: Props) {
 						<PostAuthorAvatar name={author?.name} image={author?.image} />
 					</div>
 					<div className="flex flex-col items-start justify-center flex-1 w-full gap-1">
-						<span className="text-xl font-bold leading-tight transition-colors group-hover:text-brand1">{title}</span>
+						<span className="text-xl font-bold leading-tight transition-colors group-hover:text-brand-shade-1">{title}</span>
 						{/* <span className="md:hidden"> */}
 						<PostDate dateString={publishedAt} />
 						{/* </span> */}

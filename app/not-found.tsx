@@ -10,7 +10,7 @@ export default function NotFound() {
 				<h2 className="text-xl text-white/80">These aren&apos;t the droids you&apos;re looking for...</h2>
 				<Link
 					href="/"
-					className="flex flex-row items-center justify-center gap-2 text-2xl font-bold group hover:text-orange-400 text-brandOrange w-fit"
+					className="flex flex-row items-center justify-center gap-2 text-2xl font-bold group hover:text-orange-400 text-brand-orange w-fit"
 				>
 					<span className="group-hover:bg-squiggle">Return to spaceport</span>
 					<FontAwesomeIcon icon={faArrowRight} />

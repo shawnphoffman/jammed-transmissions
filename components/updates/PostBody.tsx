@@ -11,7 +11,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 			return <span className="text-red-400">{children}</span>
 		},
 		textBlue: ({ children }) => {
-			return <span className="text-brand2">{children}</span>
+			return <span className="text-brand-shade-2">{children}</span>
 		},
 		textGreen: ({ children }) => {
 			return <span className="text-green-400">{children}</span>

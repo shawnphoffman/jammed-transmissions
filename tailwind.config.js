@@ -11,13 +11,18 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				brand1: '#ccf',
-				brand2: '#99f',
-				brand3: '#66f',
-				brand4: '#33f',
-				brandOrange: '#f66e0d', // links, borders, and review title
-				bg1: '#07091a',
-				bg2: '#050b3b',
+				brand: {
+					shade: {
+						1: '#ccf',
+						2: '#99f',
+						3: '#66f',
+					},
+					orange: '#f66e0d',
+					background: {
+						dark: '#07091a',
+						light: '#050b3b',
+					},
+				},
 			},
 		},
 	},
