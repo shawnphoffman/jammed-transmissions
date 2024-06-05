@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: PageProps, parent: ResolvingM
 			url: `/updates/${post.slug}`,
 			type: 'article',
 			publishedTime: post.publishedAt,
-			authors: [post.author?.name!, 'Scruffy Lookin Podcasters'],
+			authors: [post.author?.name!, 'Jammed Transmissions'],
 		},
 	}
 }
