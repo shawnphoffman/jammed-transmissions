@@ -27,7 +27,7 @@ export const postsListQuery =
 }`
 
 export const postSlugsQuery = groq`
-*[_type == "post" && defined(slug.current) && "${podId}" in categories[]._ref][].slug.current
+*[_type == "post" && "${podId}" in categories[]._ref][].slug.current
 `
 
 export const postBySlugQuery = groq`
