@@ -4,8 +4,8 @@ import { faAmazon, faBluesky, faSpotify, faXTwitter } from '@awesome.me/kit-d7cc
 import {
 	faAt,
 	faPodcast,
-	faSquareRss,
 	faSpaceStationMoonConstruction,
+	faSquareRss,
 	faStar,
 	faStarSharp,
 } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
@@ -18,8 +18,8 @@ import {
 	faIheart,
 	faOvercast,
 	faPocketCasts,
-	faTeepublic,
 	faRadioPublic,
+	faTeepublic,
 } from '@awesome.me/kit-d7ccc5bb1a/icons/kit/custom'
 // CORE
 import { library } from '@fortawesome/fontawesome-svg-core'

@@ -1,7 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import EpisodeSummary from './EpisodeSummary'
-import Link from 'next/link'
 
 const options = { year: 'numeric', month: 'long', day: 'numeric' } as const
 

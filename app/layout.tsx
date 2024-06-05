@@ -9,8 +9,8 @@ import Image from 'next/image'
 
 import titleLogo from '@/app/title.png'
 import ActiveLink from '@/components/core/ActiveLink'
-import StarBackground from '@/components/core/StarBackground'
 import Gonk from '@/components/core/Gonk'
+import StarBackground from '@/components/core/StarBackground'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
