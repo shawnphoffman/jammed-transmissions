@@ -35,25 +35,6 @@ export async function getSpotifyReviews() {
 		return {}
 	}
 }
-function cleanSummary(text: string) {
-	if (!text) return ''
-
-	// const regex1 = /(Chapters|^\d{2}:\d{2}:\d{2}.*)[\r\n]?/gm
-	// text = text.replace(regex1, '')
-
-	const regex2 = /.*(?:All\ the\ goods).*/gm
-	text = text.replace(regex2, '')
-
-	// console.log(text)
-
-	// const regex3 = /\b(https?:\/\/\S+)\s+\[\1\]/g
-	// text = text.replace(regex3, '$1')
-
-	const regexFinal = /[\r\n]{3,}/g
-	text = text.replace(regexFinal, '\n').replace(/[\r\n]+\s*$/g, '')
-
-	return text
-}
 
 export async function getEpisodes() {
 	try {
@@ -83,4 +64,16 @@ export async function getEpisodes() {
 		console.error(error)
 		return { episodes: [] }
 	}
+}
+
+function cleanSummary(text: string) {
+	if (!text) return ''
+
+	const regex2 = /.*(?:All\ the\ goods).*/gm
+	text = text.replace(regex2, '')
+
+	const regexFinal = /[\r\n]{3,}/g
+	text = text.replace(regexFinal, '\n').replace(/[\r\n]+\s*$/g, '')
+
+	return text
 }
