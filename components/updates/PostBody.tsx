@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { PortableText, type PortableTextReactComponents } from '@portabletext/react'
 
 import PostImage from './portableText/PostImage'
+import UrlEmbed from './portableText/UrlEmbed'
 import YoutubeEmbed from './portableText/YoutubeEmbed'
 import styles from './PostBody.module.css'
 
@@ -20,6 +21,10 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 	types: {
 		image: ({ value }) => {
 			return <PostImage {...value} />
+		},
+		embed: ({ value }) => {
+			const { url } = value
+			return <UrlEmbed url={url} />
 		},
 		youtube: ({ value }) => {
 			const { url } = value

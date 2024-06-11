@@ -63,7 +63,7 @@
 	/* ================== */
 	/* LINKS */
 	/* ================== */
-	a {
+	a:not(:global(.embed)) {
 		@apply transition-all text-brand-shade-1 hover:text-brand-shade-2 hover:underline;
 	}
 }
