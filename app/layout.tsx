@@ -61,7 +61,8 @@ export default function RootLayout({ children }) {
 								<ActiveLink href="/" label="Links" />
 								<ActiveLink href="/episodes" label="Episodes" />
 								{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" fuzzy />}
-								<ActiveLink href="/friends" label="Friends" />
+								{/* <ActiveLink href="/friends" label="Friends" /> */}
+								<ActiveLink href="/updates/our-friends" label="Friends" />
 								<ActiveLink href="/listen-now" label="Listen Now" />
 							</div>
 						</div>
