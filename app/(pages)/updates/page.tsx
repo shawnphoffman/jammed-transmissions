@@ -1,6 +1,12 @@
+import { Metadata } from 'next/types'
+
 import PostRow from '@/components/updates/PostRow'
 import { getAllPosts } from '@/sanity/sanity.requests'
 import { POST_QUERYResult } from '@/sanity/sanity.types'
+
+export const metadata: Metadata = {
+	title: 'Updates',
+}
 
 export default async function UpdatesPage() {
 	const posts = await getAllPosts()

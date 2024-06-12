@@ -11,23 +11,21 @@ import ActiveLink from '@/components/core/ActiveLink'
 import Gonk from '@/components/core/Gonk'
 import StarBackground from '@/components/core/StarBackground'
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+import { siteDescription, siteTitle, siteUrl } from './meta'
 
-const title = 'Jammed Transmissions'
-const description = 'A positive, listener interactive Star Wars podcast since 2018'
-const url = 'https://jammedtransmissions.com'
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata = {
 	title: {
-		template: `%s | ${title}`,
-		default: title,
+		template: `%s | ${siteTitle}`,
+		default: siteTitle,
 	},
-	description,
-	metadataBase: url,
+	description: siteDescription,
+	metadataBase: new URL(siteUrl),
 	openGraph: {
-		title: `${title}: A Star Wars Podcast`,
-		description,
-		url: url,
+		title: `${siteTitle}: A Star Wars Podcast`,
+		description: siteDescription,
+		url: siteUrl,
 		locale: 'en_US',
 		type: 'website',
 	},
@@ -47,10 +45,10 @@ export default function RootLayout({ children }) {
 				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
 					<div className="z-10 flex flex-col w-full max-w-4xl min-h-dvh">
 						<div className="flex flex-col items-center gap-4 m-4 text-center">
-							<h1 className="sr-only">{title}</h1>
+							<h1 className="sr-only">{siteTitle}</h1>
 							<Image
 								className="h-auto max-w-[450px] w-full fa-fade"
-								alt="Jammed Transmissions"
+								alt=""
 								src={titleLogo}
 								width={450}
 								height={160}

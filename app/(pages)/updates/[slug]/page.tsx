@@ -1,6 +1,7 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { siteTitle } from '@/app/meta'
 import PostAuthor from '@/components/updates/PostAuthor'
 import PostBody from '@/components/updates/PostBody'
 import PostCoverImage from '@/components/updates/PostCoverImage'
@@ -63,7 +64,7 @@ export async function generateMetadata({ params }: PageProps, parent: ResolvingM
 			url: `/updates/${post.slug}`,
 			type: 'article',
 			publishedTime: post.publishedAt,
-			authors: [post.author?.name!, 'Jammed Transmissions'],
+			authors: [post.author?.name!, siteTitle],
 		},
 	}
 }
