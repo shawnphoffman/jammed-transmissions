@@ -8,7 +8,7 @@ const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Ame
 export default function Episodes({ episode }) {
 	const pubDate = new Date(episode.pubDate).toLocaleDateString('en-US', options)
 	return (
-		<div className="flex flex-col justify-start w-full p-4 mt-2 text-sm text-left border rounded-lg border-brand-shade-1 bg-slate-950/50">
+		<div className="flex flex-col justify-start w-full p-4 mt-2 text-sm text-left border rounded-lg border-slate-800 bg-slate-950/50">
 			<h2 className="mb-2 text-2xl font-bold text-center text-white md:mb-4">{episode.title}</h2>
 			<div className="flex flex-col items-center justify-start gap-4 md:flex-row md:items-start">
 				<Image src={episode.imgSrc} alt={episode.title} className="w-32 md:w-48 h-fit aspect-square rounded-2xl" width={192} height={192} />
