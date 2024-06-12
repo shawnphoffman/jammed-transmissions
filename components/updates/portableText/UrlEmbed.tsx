@@ -5,9 +5,10 @@ import Loading from '@/components/core/Loading'
 
 type Props = {
 	url: string
+	overrideTitle?: string
 }
 
-async function UrlEmbed({ url }: Props) {
+async function UrlEmbed({ url, overrideTitle }: Props) {
 	async function fetchMeta() {
 		try {
 			const fetchUrl = `https://api.shawn.party/api/open-graph?scrape=${url}`
@@ -37,7 +38,7 @@ async function UrlEmbed({ url }: Props) {
 			{/* eslint-disable-next-line @next/next/no-img-element */}
 			<img className="max-w-36 " src={image} alt="" />
 			<div className="flex flex-col leading-tight gap-0.5 py-2 px-4">
-				<span className="font-semibold transition-colors ">{meta.meta.title}</span>
+				<span className="font-semibold transition-colors ">{overrideTitle ?? meta.meta.title}</span>
 				<span className="hidden text-sm text-white/65 sm:line-clamp-2">{meta.meta.description}</span>
 			</div>
 		</div>
@@ -50,16 +51,16 @@ const Loader = () => (
 	</div>
 )
 
-export default function UrlEmbedLoader({ url }: Props) {
+export default function UrlEmbedLoader({ url, overrideTitle }: Props) {
 	return (
 		<Link
 			href={url}
 			target="_blank"
-			className="flex flex-col justify-center gap-4 my-2 overflow-hidden transition-colors border rounded-lg outline-offset-2 group embed bg-slate-950/50 hover:border-brand-shade-3 border-slate-900"
+			className="flex flex-col justify-center gap-4 my-4 overflow-hidden transition-colors border rounded-lg outline-offset-2 group embed bg-slate-950/50 hover:border-brand-shade-3 border-slate-800"
 		>
 			<span className="sr-only">{url}</span>
 			<Suspense fallback={<Loader />}>
-				<UrlEmbed url={url} />
+				<UrlEmbed url={url} overrideTitle={overrideTitle} />
 			</Suspense>
 		</Link>
 	)

@@ -23,8 +23,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 			return <PostImage {...value} />
 		},
 		embed: ({ value }) => {
-			const { url } = value
-			return <UrlEmbed url={url} />
+			return <UrlEmbed {...value} />
 		},
 		youtube: ({ value }) => {
 			const { url } = value
