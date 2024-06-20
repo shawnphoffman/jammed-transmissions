@@ -96,15 +96,17 @@ export type Award = {
 	_updatedAt: string
 	_rev: string
 	name: string
-	linkUrl: string
-	imageUrl: string
-	active: boolean
 	category?: {
 		_ref: string
 		_type: 'reference'
 		_weak?: boolean
 		[internalGroqTypeReferenceTo]?: 'category'
 	}
+	linkUrl?: string
+	imageUrl: string
+	active: boolean
+	width?: number
+	height?: number
 }
 
 export type BlockContent = Array<
@@ -165,6 +167,10 @@ export type Category = {
 		crop?: SanityImageCrop
 		_type: 'image'
 	}
+	webUrl?: string
+	webUrlDev?: string
+	applePodcastId?: string
+	spotifyPodcastId?: string
 }
 
 export type Post = {
@@ -287,7 +293,6 @@ export type Slug = {
 	source?: string
 }
 export declare const internalGroqTypeReferenceTo: unique symbol
-
 
 // Source: lib/sanity/sanity.queries.ts
 // Variable: POSTS_QUERY
@@ -413,6 +418,10 @@ export type PODCASTS_QUERYResult = Array<{
 		crop?: SanityImageCrop
 		_type: 'image'
 	}
+	webUrl?: string
+	webUrlDev?: string
+	applePodcastId?: string
+	spotifyPodcastId?: string
 }>
 
 // Variable: PODCAST_QUERY
@@ -435,6 +444,10 @@ export type PODCAST_QUERYResult = {
 		crop?: SanityImageCrop
 		_type: 'image'
 	}
+	webUrl?: string
+	webUrlDev?: string
+	applePodcastId?: string
+	spotifyPodcastId?: string
 } | null
 
 // Variable: AUTHORS_QUERY
@@ -482,12 +495,14 @@ export type AUTHOR_QUERYResult = {
 } | null
 
 // Variable: AWARDS_QUERY
-// Query: *[_type == "award"]{		_id,	name,	imageUrl,	linkUrl,	"category": category->{title, image}}
+// Query: *[_type == "award"]{		...,	"category": category->{title, image},}
 export type AWARDS_QUERYResult = Array<{
 	_id: string
+	_type: 'award'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
 	name: string
-	imageUrl: string
-	linkUrl: string
 	category: {
 		title: string
 		image: {
@@ -502,15 +517,22 @@ export type AWARDS_QUERYResult = Array<{
 			_type: 'image'
 		}
 	} | null
+	linkUrl?: string
+	imageUrl: string
+	active: boolean
+	width?: number
+	height?: number
 }>
 
 // Variable: AWARD_QUERY
-// Query: *[_type == "award" && _id == $id][0] {		_id,	name,	imageUrl,	linkUrl,	"category": category->{title, image}}
+// Query: *[_type == "award" && _id == $id][0] {		...,	"category": category->{title, image},}
 export type AWARD_QUERYResult = {
 	_id: string
+	_type: 'award'
+	_createdAt: string
+	_updatedAt: string
+	_rev: string
 	name: string
-	imageUrl: string
-	linkUrl: string
 	category: {
 		title: string
 		image: {
@@ -525,6 +547,9 @@ export type AWARD_QUERYResult = {
 			_type: 'image'
 		}
 	} | null
+	linkUrl?: string
+	imageUrl: string
+	active: boolean
+	width?: number
+	height?: number
 } | null
-
-

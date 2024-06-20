@@ -4,6 +4,7 @@ export const applePodcastId = '1445333816'
 export const applePodcastUrl = `https://podcasts.apple.com/us/podcast/id${applePodcastId}`
 export const appleRatingUrl = `${applePodcastUrl}?see-all=reviews`
 export const rssFeedUrl = 'https://anchor.fm/s/d8972e20/podcast/rss'
+export const goodpodsUrl = 'https://goodpods.com/podcasts/jammed-transmissions-a-star-wars-podcast-222540'
 
 type LinkItem = {
 	title: string
@@ -70,7 +71,7 @@ const items: LinkItem[] = [
 	},
 	{
 		title: 'Goodpods',
-		href: 'https://goodpods.com/podcasts/jammed-transmissions-a-star-wars-podcast-222540',
+		href: goodpodsUrl,
 		icon: 'fak fa-goodpods',
 		background: 'bg-goodpods',
 		color: 'text-black',

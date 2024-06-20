@@ -12,6 +12,12 @@ module.exports = {
 				protocol: 'https',
 				hostname: 'cdn.sanity.io',
 			},
+			{
+				protocol: 'https',
+				hostname: 'storage.googleapis.com',
+				port: '',
+				pathname: '/goodpods-images-bucket/**',
+			},
 		],
 	},
 	async redirects() {

@@ -36,3 +36,11 @@ export const postBySlugQuery = groq`
   ${postFields}
 }
 `
+
+// =======================
+// AWARD QUERIES
+// =======================
+export const AWARDS_QUERY =
+	process.env.VERCEL_ENV === 'production'
+		? groq`*[_type == "award" && category._ref == "${podId}" && active==true]`
+		: groq`*[_type == "award" && category._ref == "${podId}"]`

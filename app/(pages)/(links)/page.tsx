@@ -1,7 +1,9 @@
 import { Suspense } from 'react'
 
+import Awards from '@/components/core/Awards'
 import LinkCard from '@/components/core/LinkCard'
 import RatingsApple from '@/components/core/RatingsApple'
+import RatingsGoodpods from '@/components/core/RatingsGoodpods'
 import RatingsSpotify from '@/components/core/RatingsSpotify'
 import Reviews from '@/components/core/Reviews'
 
@@ -10,16 +12,17 @@ import items from './links'
 export default async function Links() {
 	return (
 		<>
-			<div className="text-base sm:text-lg leading-normal w-full max-w-3xl">
+			<div className="w-full max-w-3xl text-base leading-normal sm:text-lg">
 				A positive, listener interactive Star Wars podcast since 2018
 			</div>
-			<div className="flex flex-row items-center gap-2 flex-wrap justify-center">
+			<div className="flex flex-row flex-wrap items-center justify-center gap-2">
 				<Suspense>
 					<RatingsApple />
+					<RatingsGoodpods />
 					<RatingsSpotify />
 				</Suspense>
 			</div>
-			<div className="flex flex-row justify-center flex-wrap w-full gap-4">
+			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
 				{items.map((item, i) => {
 					return (
 						<LinkCard
@@ -33,7 +36,12 @@ export default async function Links() {
 					)
 				})}
 			</div>
-			<div className="flex flex-row justify-center flex-wrap w-full gap-4">
+
+			<Suspense>
+				<Awards />
+			</Suspense>
+
+			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
 				<Suspense>
 					<Reviews />
 				</Suspense>
