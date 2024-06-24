@@ -27,7 +27,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 		},
 		youtube: ({ value }) => {
 			const { url } = value
-			const match = url.match(/[?&]v=([^&]+)/)
+			const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|.+?&v=))([^?&]+)/)
 			const videoId = match ? match[1] : null
 			return <YoutubeEmbed videoId={videoId} />
 		},
