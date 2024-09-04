@@ -26,11 +26,14 @@ export const getReviews = getAppleReviews
 
 export async function getSpotifyReviews() {
 	try {
-		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${spotifyUrl}`, {
-			next: { revalidate: 60 * 60 * 1 },
+		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify-scrape?url=${spotifyUrl}`, {
+			next: { revalidate: 60 * 60 * 6 },
 		})
 		const data = await res.json()
-		return data
+		return {
+			url: data?.url,
+			rating: data?.vals?.rating ? Number(data?.vals?.rating) : undefined,
+		}
 	} catch {
 		return {}
 	}
