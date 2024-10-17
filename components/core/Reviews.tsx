@@ -15,7 +15,7 @@ export default async function Reviews() {
 	if (!reviews) return null
 
 	const filteredReviews = reviews.reduce((memo, acc) => {
-		if (acc.stars !== '5' && !!process.env.VERCEL_URL) {
+		if (acc.stars !== 5 && !!process.env.VERCEL_URL) {
 			return memo
 		}
 		memo.push(acc)
