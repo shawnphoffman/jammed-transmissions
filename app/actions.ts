@@ -1,6 +1,7 @@
 'use server'
 
 import { XMLParser } from 'fast-xml-parser'
+import { sanitize } from 'isomorphic-dompurify'
 
 import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
@@ -71,6 +72,8 @@ export async function getEpisodes() {
 
 function cleanSummary(text: string) {
 	if (!text) return ''
+
+	text = sanitize(text, { ALLOWED_TAGS: [] })
 
 	const regex2 = /.*(?:All\ the\ goods).*/gm
 	text = text.replace(regex2, '')
