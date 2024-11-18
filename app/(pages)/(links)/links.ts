@@ -16,18 +16,6 @@ type LinkItem = {
 
 const items: LinkItem[] = [
 	{
-		title: 'Twitter',
-		href: 'https://twitter.com/JTComlink',
-		icon: 'fa-brands fa-x-twitter',
-		background: 'bg-twitter',
-	},
-	{
-		title: 'Twitter - Rik',
-		href: 'https://twitter.com/cadbanesbounty',
-		icon: 'fa-brands fa-x-twitter',
-		background: 'bg-twitter',
-	},
-	{
 		title: 'Spotify',
 		href: 'https://open.spotify.com/show/7Cxgn8198cn9rysCF8MWzo',
 		icon: 'fa-brands fa-spotify',
