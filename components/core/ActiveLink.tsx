@@ -12,7 +12,9 @@ type Props = {
 
 const ActiveLink = ({ label, href, fuzzy, ...rest }: Props) => {
 	const currentRoute = usePathname()
-	const isActive = fuzzy ? currentRoute.toLowerCase().startsWith(href) : currentRoute === href
+	const isActive = fuzzy
+		? currentRoute.toLowerCase().startsWith(href) && !currentRoute.toLowerCase().includes('our-friends')
+		: currentRoute === href
 
 	const conditionalClasses = classnames(
 		isActive ? 'decoration-brand-orange underline underline-offset-[7px] decoration-[1px]' : 'hover:text-brand-orange'

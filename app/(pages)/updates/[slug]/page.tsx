@@ -1,4 +1,5 @@
 import type { Metadata, ResolvingMetadata } from 'next'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 import { siteTitle } from '@/app/meta'
@@ -9,6 +10,8 @@ import PostTitle from '@/components/updates/PostTitle'
 import ShareButtons from '@/components/updates/ShareButtons'
 import { urlForSanityImage } from '@/sanity/sanity.image'
 import { getAllPostsSlugs, getPostBySlug } from '@/sanity/sanity.requests'
+
+import FriendImage from './friends.png'
 
 type PageProps = {
 	params: Promise<{
@@ -26,18 +29,26 @@ export default async function PostPage(props: PageProps) {
 		return notFound()
 	}
 
+	const isFriendsPage = params!.slug === 'our-friends'
+
 	const { title, body = {}, mainImage, slug } = post
 
 	return (
 		<div className="flex flex-col items-center justify-center w-full gap-4">
-			<PostTitle>{title}</PostTitle>
+			{!isFriendsPage ? (
+				<>
+					<PostTitle>{title}</PostTitle>
 
-			<div className="flex flex-row gap-8">
-				<PostAuthor name={post.author?.name} image={post.author?.image} />
-				<ShareButtons slug={slug} title={title} />
-			</div>
+					<div className="flex flex-row gap-8">
+						<PostAuthor name={post.author?.name} image={post.author?.image} />
+						<ShareButtons slug={slug} title={title} />
+					</div>
 
-			<PostCoverImage title={title} image={mainImage} priority />
+					<PostCoverImage title={title} image={mainImage} priority />
+				</>
+			) : (
+				<Image src={FriendImage} alt="Our Friends" className="w-auto max-h-80" />
+			)}
 
 			<article className="w-full pb-4 text-left rounded-lg bg-slate-950/75">
 				<PostBody content={body} />
