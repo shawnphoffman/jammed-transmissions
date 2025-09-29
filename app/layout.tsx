@@ -33,14 +33,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html
-			lang="en"
-			className={`${openSans.className} bg-brand-background-dark bg-gradient-to-b from-brand-background-dark to-brand-background-light text-white p-0 m-0 overflow-x-hidden w-dvw`}
-		>
+		<html lang="en" className={`${openSans.className} bg-black text-white p-0 m-0 overflow-x-hidden w-dvw`}>
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1445333816" />
 			</head>
-			<body className="h-full px-2 py-0 mx-auto my-0 text-white w-dvw min-h-dvh">
+			<body className="px-2 py-0 mx-auto my-0 text-white min-h-dvh w-dvw bg-gradient-to-b from-brand-background-dark to-brand-background-light">
 				<StarBackground />
 				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
 					<div className="z-10 flex flex-col w-full max-w-4xl min-h-dvh">

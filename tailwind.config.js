@@ -19,8 +19,10 @@ module.exports = {
 					},
 					orange: '#f66e0d',
 					background: {
-						dark: '#07091a',
-						light: '#050b3b',
+						// dark: '#07091a',
+						// light: '#050b3b',
+						dark: '#000',
+						light: '#07091a',
 					},
 				},
 			},

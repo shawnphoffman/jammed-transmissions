@@ -28,9 +28,9 @@ module.exports = {
 				permanent: true,
 			},
 			{
-				source: '/studio',
+				source: '/blog',
 				destination: 'https://pod-content-studio.vercel.app/studio',
-				permanent: false,
+				permanent: true,
 			},
 			{
 				source: '/refresh',

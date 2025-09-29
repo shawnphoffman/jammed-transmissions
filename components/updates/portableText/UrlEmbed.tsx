@@ -56,7 +56,7 @@ export default function UrlEmbedLoader({ url, overrideTitle }: Props) {
 		<Link
 			href={url}
 			target="_blank"
-			className="flex flex-col justify-center gap-4 my-4 overflow-hidden transition-colors border rounded-lg outline-offset-2 group embed bg-slate-950/50 hover:border-brand-shade-3 border-slate-800"
+			className="flex flex-col justify-center gap-4 my-4 overflow-hidden transition-colors border rounded-lg outline-offset-2 group embed bg-gray-950/50 hover:border-brand-shade-3 border-gray-800"
 		>
 			<span className="sr-only">{url}</span>
 			<Suspense fallback={<Loader />}>

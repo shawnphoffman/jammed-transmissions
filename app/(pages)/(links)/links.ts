@@ -52,12 +52,6 @@ const items: LinkItem[] = [
 		background: 'bg-overcast',
 	},
 	{
-		title: 'RSS',
-		href: 'https://anchor.fm/s/d8972e20/podcast/rss',
-		icon: 'fa-solid fa-square-rss',
-		background: 'bg-rss',
-	},
-	{
 		title: 'Goodpods',
 		href: goodpodsUrl,
 		icon: 'fak fa-goodpods',
@@ -71,29 +65,35 @@ const items: LinkItem[] = [
 		background: 'bg-amazonmusic',
 	},
 	{
-		title: 'iHeart',
-		href: 'https://www.iheart.com/podcast/338-jammed-transmissions-a-sta-102467606/',
-		icon: 'fak fa-iheart',
-		background: 'bg-iheart',
+		title: 'RSS',
+		href: 'https://anchor.fm/s/d8972e20/podcast/rss',
+		icon: 'fa-solid fa-square-rss',
+		background: 'bg-rss',
 	},
-	{
-		title: 'Pocket Casts',
-		href: 'https://pca.st/j125cwks',
-		icon: 'fak fa-pocket-casts',
-		background: 'bg-pocketcasts',
-	},
-	{
-		title: 'Radio Public',
-		href: 'https://radiopublic.com/jammed-transmissions-a-star-wars-Wwogwa',
-		icon: 'fak fa-radio-public',
-		background: 'bg-radiopublic',
-	},
-	{
-		title: 'Castbox',
-		href: 'https://castbox.fm/podcasts/Jammed%20Transmissions:%20A%20Star%20Wars%20Podcast',
-		icon: 'fak fa-castbox',
-		background: 'bg-castbox',
-	},
+	// {
+	// 	title: 'iHeart',
+	// 	href: 'https://www.iheart.com/podcast/338-jammed-transmissions-a-sta-102467606/',
+	// 	icon: 'fak fa-iheart',
+	// 	background: 'bg-iheart',
+	// },
+	// {
+	// 	title: 'Pocket Casts',
+	// 	href: 'https://pca.st/j125cwks',
+	// 	icon: 'fak fa-pocket-casts',
+	// 	background: 'bg-pocketcasts',
+	// },
+	// {
+	// 	title: 'Radio Public',
+	// 	href: 'https://radiopublic.com/jammed-transmissions-a-star-wars-Wwogwa',
+	// 	icon: 'fak fa-radio-public',
+	// 	background: 'bg-radiopublic',
+	// },
+	// {
+	// 	title: 'Castbox',
+	// 	href: 'https://castbox.fm/podcasts/Jammed%20Transmissions:%20A%20Star%20Wars%20Podcast',
+	// 	icon: 'fak fa-castbox',
+	// 	background: 'bg-castbox',
+	// },
 ] as const
 
 export default items

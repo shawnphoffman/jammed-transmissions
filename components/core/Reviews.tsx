@@ -30,7 +30,7 @@ export default async function Reviews() {
 			{filteredReviews.map((r: Review) => (
 				<div
 					key={r.title}
-					className="flex flex-col justify-start px-4 py-2 m-2 text-sm text-left border rounded-lg border-slate-800 bg-slate-950/50"
+					className="flex flex-col justify-start px-4 py-2 m-2 text-sm text-left border rounded-lg border-gray-800 bg-gray-950/50"
 				>
 					<div className="flex flex-row items-center justify-between">
 						<div className="flex flex-col items-start gap-1 sm:gap-4 sm:flex-row sm:items-center">

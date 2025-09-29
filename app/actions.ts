@@ -1,7 +1,7 @@
 'use server'
 
 import { XMLParser } from 'fast-xml-parser'
-import { sanitize } from 'isomorphic-dompurify'
+import purify from 'isomorphic-dompurify'
 
 import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
@@ -71,15 +71,34 @@ export async function getEpisodes() {
 }
 
 function cleanSummary(text: string) {
+	const test = text?.includes('Episode 161')
+
+	if (test) {
+		console.log('text', text)
+	}
+
 	if (!text) return ''
 
-	text = sanitize(text, { ALLOWED_TAGS: [] })
+	text = text.replace(/<p><br><\/p>|\n/gim, '\n\n')
 
-	const regex2 = /.*(?:All\ the\ goods).*/gm
-	text = text.replace(regex2, '')
+	text = purify.sanitize(text, { ALLOWED_TAGS: ['a'] })
+	if (test) {
+		console.log('wow1', text)
+	}
+
+	text = text.replace(/\s*All\ the\ goods.*/gim, '')
+	text = text.replace(/\s*Please\ rate.*/gim, '')
+
+	if (test) {
+		console.log('wow2', text)
+	}
 
 	const regexFinal = /[\r\n]{3,}/g
 	text = text.replace(regexFinal, '\n').replace(/[\r\n]+\s*$/g, '')
+
+	if (test) {
+		console.log('wow3', text)
+	}
 
 	return text
 }

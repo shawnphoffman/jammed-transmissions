@@ -50,7 +50,7 @@ export default async function PostPage(props: PageProps) {
 				<Image src={FriendImage} alt="Our Friends" className="w-auto max-h-80" />
 			)}
 
-			<article className="w-full pb-4 text-left rounded-lg bg-slate-950/75">
+			<article className="w-full pb-4 text-left rounded-lg bg-gray-950/75">
 				<PostBody content={body} />
 			</article>
 		</div>

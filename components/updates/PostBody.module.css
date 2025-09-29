@@ -47,7 +47,7 @@
 	/* ================== */
 	ul,
 	ol {
-		@apply space-y-1 list-inside text-slate-100;
+		@apply space-y-1 list-inside text-gray-100;
 	}
 	li ul,
 	li ol {

@@ -36,7 +36,7 @@ const PostImage = (props: PostImageProps) => {
 				{...imageProps}
 			/>
 			{caption && (
-				<figcaption className="mt-2 text-sm italic text-center text-slate-400 text-pretty">
+				<figcaption className="mt-2 text-sm italic text-center text-gray-400 text-pretty">
 					{/*  */}
 					{caption}
 				</figcaption>

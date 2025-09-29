@@ -3,7 +3,7 @@ export default function StarBackground() {
 		<>
 			<div className="stars-1 stars"></div>
 			<div className="stars-2 stars"></div>
-			<div className="stars-3 stars"></div>
+			{/* <div className="stars-3 stars"></div> */}
 		</>
 	)
 }

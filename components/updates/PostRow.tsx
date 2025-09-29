@@ -14,7 +14,7 @@ type Props = {
 export default function PostRow({ post }: Props) {
 	const { author, mainImage, publishedAt, slug, title } = post
 	return (
-		<a href={`/updates/${slug}`} className="w-full mx-auto text-left text-white md:w-full group max-md:max-w-96 hover:bg-slate-900">
+		<a href={`/updates/${slug}`} className="w-full mx-auto text-left text-white md:w-full group max-md:max-w-96 hover:bg-gray-900">
 			<div className="flex flex-col items-center justify-between gap-2 px-0 py-4 transition-all rounded-lg md:py-2 md:px-4 md:flex-row md:gap-4">
 				{mainImage && (
 					<Image
