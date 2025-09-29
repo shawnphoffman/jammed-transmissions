@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { EmailShareButton, FacebookShareButton, TwitterShareButton } from 'next-share'
 
 export default function ShareButtons({ slug, title }) {
-	const domain = !!(process.env.VERCEL_ENV || process.env.NEXT_PUBLIC_VERCEL_ENV)
-		? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
-		: 'http://localhost:3000'
+	const domain =
+		process.env.VERCEL_ENV || process.env.NEXT_PUBLIC_VERCEL_ENV
+			? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
+			: 'http://localhost:3000'
 	const url = `${domain}/updates/${slug}`
 	const formattedTitle = `Just Shillin': ${title}`
 

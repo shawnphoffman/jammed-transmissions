@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
 
 	const searchParams = request.nextUrl.searchParams
 	const force = searchParams.get('force')
-	if (!!force) {
+	if (force === 'true') {
 		console.log('Revalidating /episodes forcefully')
 		revalidatePath('/episodes')
 	}

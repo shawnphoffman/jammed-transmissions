@@ -86,8 +86,8 @@ function cleanSummary(text: string) {
 		console.log('wow1', text)
 	}
 
-	text = text.replace(/\s*All\ the\ goods.*/gim, '')
-	text = text.replace(/\s*Please\ rate.*/gim, '')
+	text = text.replace(/\s*All the goods.*/gim, '')
+	text = text.replace(/\s*Please rate.*/gim, '')
 
 	if (test) {
 		console.log('wow2', text)

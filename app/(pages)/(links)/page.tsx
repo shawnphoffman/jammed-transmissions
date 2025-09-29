@@ -23,7 +23,7 @@ export default async function Links() {
 				</Suspense>
 			</div>
 			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
-				{items.map((item, i) => {
+				{items.map(item => {
 					return (
 						<LinkCard
 							key={item.title}

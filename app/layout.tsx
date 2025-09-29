@@ -1,5 +1,5 @@
+import { CSSProperties } from 'react'
 import '@/app/global.css'
-import '@/app/(pages)/icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
@@ -50,13 +50,12 @@ export default function RootLayout({ children }) {
 								width={450}
 								height={160}
 								priority
-								style={{ '--fa-fade-opacity': 0.85, '--fa-animation-duration': '2s' } as React.CSSProperties}
+								style={{ '--fa-fade-opacity': 0.85, '--fa-animation-duration': '2s' } as CSSProperties}
 							/>
 							<div className="flex flex-row flex-wrap justify-center gap-x-4 gap-y-1">
 								<ActiveLink href="/" label="Links" />
 								<ActiveLink href="/episodes" label="Episodes" />
 								{process.env.VERCEL_ENV !== 'production' && <ActiveLink href="/updates" label="Updates" fuzzy />}
-								{/* <ActiveLink href="/friends" label="Friends" /> */}
 								<ActiveLink href="/updates/our-friends" label="Friends" />
 								<ActiveLink href="/listen-now" label="Listen Now" />
 							</div>
