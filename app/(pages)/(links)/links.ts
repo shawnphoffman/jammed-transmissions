@@ -1,8 +1,8 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { faAmazon, faBluesky, faSpotify } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
-import { faAt, faRssSquare } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
+import { faAt, faRssSquare, faShirt } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
 import { faPodcast } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
-import { faGoodpods, faOvercast, faTeepublic } from '@awesome.me/kit-d7ccc5bb1a/icons/kit/custom'
+import { faGoodpods, faOvercast } from '@awesome.me/kit-d7ccc5bb1a/icons/kit/custom'
 
 export const spotifyId = '7Cxgn8198cn9rysCF8MWzo'
 export const spotifyUrl = `https://open.spotify.com/show/${spotifyId}`
@@ -39,10 +39,16 @@ const items: LinkItem[] = [
 		icon: faAt,
 		background: 'bg-email',
 	},
+	// {
+	// 	title: 'TeePublic',
+	// 	href: 'https://www.teepublic.com/user/jammed-transmissions',
+	// 	icon: faTeepublic,
+	// 	background: 'bg-teepublic',
+	// },
 	{
-		title: 'TeePublic',
-		href: 'https://www.teepublic.com/user/jammed-transmissions',
-		icon: faTeepublic,
+		title: 'Merch',
+		href: 'https://shop.jammedtransmissions.com',
+		icon: faShirt,
 		background: 'bg-teepublic',
 	},
 	{
