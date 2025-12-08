@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
-import titleLogo from '@/app/title.png'
+import titleLogo from '@/app/title3.png'
 import ActiveLink from '@/components/core/ActiveLink'
 import Gonk from '@/components/core/Gonk'
 import StarBackground from '@/components/core/StarBackground'
@@ -44,11 +44,11 @@ export default function RootLayout({ children }) {
 						<div className="flex flex-col items-center gap-4 m-4 text-center">
 							<h1 className="sr-only">{siteTitle}</h1>
 							<Image
-								className="h-auto max-w-[450px] w-full fa-fade"
+								className="h-auto max-w-[1000px] w-full fa-fade"
 								alt=""
 								src={titleLogo}
-								width={450}
-								height={160}
+								width={1000}
+								height={200}
 								priority
 								style={{ '--fa-fade-opacity': 0.85, '--fa-animation-duration': '2s' } as CSSProperties}
 							/>
