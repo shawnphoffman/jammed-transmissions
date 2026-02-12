@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@awesome.me/kit-d7ccc5bb1a": "^1.0.87",
-    "@fortawesome/fontawesome-svg-core": "^7.1.0",
-    "@fortawesome/react-fontawesome": "^3.1.1",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.2.0",
     "@portabletext/react": "^4.0.3",
     "@sanity/client": "^7.11.2",
     "@sanity/image-url": "^1.2.0",
