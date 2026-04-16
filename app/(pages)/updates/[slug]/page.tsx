@@ -11,7 +11,7 @@ import ShareButtons from '@/components/updates/ShareButtons'
 import { urlForSanityImage } from '@/sanity/sanity.image'
 import { getAllPostsSlugs, getPostBySlug } from '@/sanity/sanity.requests'
 
-import FriendImage from './friends.png'
+import FriendImage from './friends-2.png'
 
 type PageProps = {
 	params: Promise<{
@@ -47,7 +47,8 @@ export default async function PostPage(props: PageProps) {
 					<PostCoverImage title={title} image={mainImage} priority />
 				</>
 			) : (
-				<Image src={FriendImage} alt="Our Friends" className="w-auto max-h-80" />
+				// <Image src={FriendImage} alt="Our Friends" className="w-auto rounded-full max-h-80 bg-neutral-300" />
+				<Image src={FriendImage} alt="Our Friends" className="w-auto rounded-full max-h-80 " />
 			)}
 
 			<article className="w-full pb-4 text-left rounded-lg bg-gray-950/75">

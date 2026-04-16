@@ -1,11 +1,18 @@
 import 'server-only'
 
-import { type QueryParams } from 'next-sanity'
+import { type PortableTextBlock, type QueryParams } from 'next-sanity'
 
 import sanityClient from '@/sanity/sanity.client'
-import { AWARDS_QUERY, postBySlugQuery, postsListQuery, postSlugsQuery } from '@/sanity/sanity.queries'
+import { AWARDS_QUERY, BANNER_QUERY, postBySlugQuery, postsListQuery, postSlugsQuery } from '@/sanity/sanity.queries'
 import { AWARDS_QUERYResult } from '@/sanity/sanity.types'
 import { type Post } from '@/sanity/sanity.types-old'
+
+export type SiteBanner = {
+	heading?: string
+	notes?: PortableTextBlock[]
+	url?: string
+	level?: 'info' | 'priority'
+} | null
 
 type SanityFetchProps = {
 	query: string
@@ -48,6 +55,14 @@ export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
 			tags: ['post'],
 		})) || []
 	return slugs.map(slug => ({ slug }))
+}
+
+// GET BANNER FOR DISPLAY
+export async function getBanner(): Promise<SiteBanner> {
+	return await sanityFetch<SiteBanner>({
+		query: BANNER_QUERY,
+		tags: ['siteBanner'],
+	})
 }
 
 // GET AWARDS FOR DISPLAY

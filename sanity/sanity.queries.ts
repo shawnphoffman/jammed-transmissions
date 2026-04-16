@@ -38,6 +38,18 @@ export const postBySlugQuery = groq`
 `
 
 // =======================
+// BANNER QUERY
+// =======================
+export const BANNER_QUERY = groq`
+*[_type == "siteBanner" && enabled == true && "${podId}" in podcasts[]._ref] | order(_updatedAt desc)[0] {
+  heading,
+  notes,
+  url,
+  level
+}
+`
+
+// =======================
 // AWARD QUERIES
 // =======================
 export const AWARDS_QUERY =

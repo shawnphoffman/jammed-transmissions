@@ -9,6 +9,7 @@ import Image from 'next/image'
 import titleLogo from '@/app/title_du.png'
 import ActiveLink from '@/components/core/ActiveLink'
 import Gonk from '@/components/core/Gonk'
+import SiteBanner from '@/components/core/SiteBanner'
 import StarBackground from '@/components/core/StarBackground'
 
 import { siteDescription, siteTitle, siteUrl } from './meta'
@@ -37,9 +38,10 @@ export default function RootLayout({ children }) {
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1445333816" />
 			</head>
-			<body className="px-2 py-0 mx-auto my-0 text-white min-h-dvh w-dvw bg-gradient-to-b to-brand-background-dark from-brand-background-light">
+			<body className="p-0 mx-auto my-0 text-white min-h-dvh w-dvw bg-gradient-to-b to-brand-background-dark from-brand-background-light">
 				<StarBackground />
-				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
+				<SiteBanner />
+				<div className="flex flex-col items-center w-full max-w-screen-xl px-2 mx-auto">
 					<div className="z-10 flex flex-col w-full max-w-4xl min-h-dvh">
 						<div className="flex flex-col items-center gap-4 m-4 text-center">
 							<h1 className="sr-only">{siteTitle}</h1>
