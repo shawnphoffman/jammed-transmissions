@@ -9,6 +9,8 @@ import Reviews from '@/components/core/Reviews'
 
 import items from './links'
 
+export const dynamic = 'force-dynamic'
+
 export default async function Links() {
 	return (
 		<>

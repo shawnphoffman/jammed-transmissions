@@ -20,10 +20,15 @@ type AwardsResponse = {
 
 export async function getAwards() {
 	try {
+		const controller = new AbortController()
+		const timeoutId = setTimeout(() => controller.abort(), 5000)
+
 		const res = await fetch(`https://api.shawn.party/api/pod-data/goodpods-scrape?url=${goodpodsUrl}`, {
 			next: { revalidate: 3600 },
 			// next: { revalidate: 360 },
+			signal: controller.signal,
 		})
+		clearTimeout(timeoutId)
 		const data: AwardsResponse = await res.json()
 		const { awards } = data
 
