@@ -14,7 +14,7 @@ const bannerPortableTextComponents: Partial<PortableTextReactComponents> = {
 }
 
 const levelStyles: Record<string, string> = {
-	info: 'bg-brand-background-dark text-white',
+	info: 'bg-brand-background-light text-white',
 	priority: 'bg-red-950 text-white border-white border-b border-dashed',
 }
 
@@ -26,7 +26,9 @@ export default async function SiteBanner() {
 	const style = levelStyles[banner.level ?? 'info']
 
 	const content = (
-		<div className={`w-full p-1 lg:p-2 text-center flex md:flex-row flex-col items-center justify-center md:gap-2 text-base ${style}`}>
+		<div
+			className={`w-full px-1 pt-1 pb-2 lg:px-2 lg:pt-2 lg:pb-3 text-center flex md:flex-row flex-col items-center justify-center md:gap-2 text-base ${style}`}
+		>
 			<div className="font-semibold">{banner.heading}</div>
 			<div className="inline-flex flex-row items-center justify-center gap-1 text-sm leading-tight">
 				{banner.notes && <PortableText value={banner.notes} components={bannerPortableTextComponents} />}
