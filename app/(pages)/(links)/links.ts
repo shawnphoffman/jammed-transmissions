@@ -1,5 +1,5 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
-import { faAmazon, faBluesky, faSpotify } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
+import { faBluesky, faInstagram, faSpotify } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
 import { faAt, faRssSquare, faShirt } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
 import { faPodcast } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
 import { faGoodpods, faOvercast } from '@awesome.me/kit-d7ccc5bb1a/icons/kit/custom'
@@ -58,6 +58,12 @@ const items: LinkItem[] = [
 		background: 'bg-bluesky',
 	},
 	{
+		title: 'Instagram',
+		href: 'https://www.instagram.com/jammedtransmissions/',
+		icon: faInstagram,
+		background: 'bg-instagram',
+	},
+	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/p4094075-GKfo0m',
 		icon: faOvercast,
@@ -70,12 +76,12 @@ const items: LinkItem[] = [
 		background: 'bg-goodpods',
 		color: 'text-black',
 	},
-	{
-		title: 'Amazon Music',
-		href: 'https://music.amazon.com/podcasts/79e0b4ef-8009-42a6-9109-c40827194123jammed-transmissions-a-star-wars-podcast',
-		icon: faAmazon,
-		background: 'bg-amazonmusic',
-	},
+	// {
+	// 	title: 'Amazon Music',
+	// 	href: 'https://music.amazon.com/podcasts/79e0b4ef-8009-42a6-9109-c40827194123jammed-transmissions-a-star-wars-podcast',
+	// 	icon: faAmazon,
+	// 	background: 'bg-amazonmusic',
+	// },
 	{
 		title: 'RSS',
 		href: 'https://anchor.fm/s/d8972e20/podcast/rss',
