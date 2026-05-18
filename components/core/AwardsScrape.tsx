@@ -23,7 +23,7 @@ export async function getAwards() {
 		const controller = new AbortController()
 		const timeoutId = setTimeout(() => controller.abort(), 5000)
 
-		const res = await fetch(`https://api.shawn.party/api/pod-data/goodpods-scrape?url=${goodpodsUrl}`, {
+		const res = await fetch(`https://api.shawn.party/api/podcast-data/goodpods-scrape?url=${goodpodsUrl}`, {
 			next: { revalidate: 3600 },
 			// next: { revalidate: 360 },
 			signal: controller.signal,

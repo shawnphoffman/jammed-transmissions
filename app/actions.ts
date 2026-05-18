@@ -7,7 +7,7 @@ import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
 export async function getAppleReviews() {
 	try {
-		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
+		const res = await fetch(`https://api.shawn.party/api/podcast-data/apple?url=${appleRatingUrl}`, {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const data = await res.json()
@@ -27,7 +27,7 @@ export const getReviews = getAppleReviews
 
 export async function getSpotifyReviews() {
 	try {
-		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify-scrape?url=${spotifyUrl}`, {
+		const res = await fetch(`https://api.shawn.party/api/podcast-data/spotify-scrape?url=${spotifyUrl}`, {
 			next: { revalidate: 60 * 60 * 6 },
 		})
 		const data = await res.json()
