@@ -54,5 +54,5 @@ export const BANNER_QUERY = groq`
 // =======================
 export const AWARDS_QUERY =
 	process.env.VERCEL_ENV === 'production'
-		? groq`*[_type == "award" && category._ref == "${podId}" && active==true]`
+		? groq`*[_type == "award" && category._ref == "${podId}" && active==true && (!defined(expiresAt) || expiresAt > now())]`
 		: groq`*[_type == "award" && category._ref == "${podId}"]`
