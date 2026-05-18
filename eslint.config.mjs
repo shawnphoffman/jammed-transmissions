@@ -1,27 +1,24 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import js from '@eslint/js'
-import shawnEslint from '@shawnphoffman/eslint-config/eslint.config.mjs'
-import react from 'eslint-plugin-react'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all,
-})
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
+import nextTypescript from 'eslint-config-next/typescript'
 
 const config = [
-	...compat.extends('next/core-web-vitals'),
-	shawnEslint[0],
+	...nextCoreWebVitals,
+	...nextTypescript,
 	{
-		plugins: {
-			react,
-		},
+		ignores: ['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
+	},
+	{
 		rules: {
-			'react/no-unescaped-entities': 'warn',
+			'@typescript-eslint/no-explicit-any': 'off',
+			'@typescript-eslint/no-require-imports': 'off',
+			'@typescript-eslint/ban-ts-comment': 'off',
+			'@typescript-eslint/no-wrapper-object-types': 'off',
+			'@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+			'@typescript-eslint/no-unused-vars': 'warn',
+			'react-hooks/error-boundaries': 'off',
+			'react-hooks/set-state-in-effect': 'off',
+			'react-hooks/purity': 'off',
+			'prefer-const': 'warn',
 		},
 	},
 ]

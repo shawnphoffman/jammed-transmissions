@@ -11,7 +11,6 @@
 		"@sanity/image-url": "^1.2.0",
 		"@sanity/types": "^4.10.1",
 		"@sbj42/word-search-generator": "^0.1.2",
-		"@shawnphoffman/pod-sites-common": "^0.0.6",
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"classnames": "^2.5.1",
@@ -35,8 +34,6 @@
 		"yet-another-react-lightbox": "^3.25.0"
 	},
 	"devDependencies": {
-		"@shawnphoffman/eslint-config": "^1.1.0",
-		"@shawnphoffman/prettier-config": "^1.0.1",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/node": "^24.5.2",
 		"@types/react": "^19.2.0",
@@ -44,7 +41,7 @@
 		"autoprefixer": "^10.4.21",
 		"baseline-browser-mapping": "^2.9.19",
 		"eslint": "^9.36.0",
-		"eslint-config-next": "15.5.4",
+		"eslint-config-next": "^16",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-react": "^7.37.5",
 		"postcss": "^8.5.6",
@@ -54,7 +51,7 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "eslint ."
 	},
 	"browserslist": {
 		"production": [
@@ -67,6 +64,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"prettier": "@shawnphoffman/prettier-config"
+	}
 }
