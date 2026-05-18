@@ -2,7 +2,9 @@ import '@/app/global.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
+import { draftMode } from 'next/headers'
 import { Open_Sans } from 'next/font/google'
+import { VisualEditing } from 'next-sanity/visual-editing'
 
 import ActiveLink from '@/components/core/ActiveLink'
 import Gonk from '@/components/core/Gonk'
@@ -30,7 +32,8 @@ export const metadata = {
 	},
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+	const { isEnabled: isDraftMode } = await draftMode()
 	return (
 		<html lang="en" className={`${openSans.className} bg-black text-white p-0 m-0 overflow-x-hidden w-dvw`}>
 			<head>
@@ -57,6 +60,7 @@ export default function RootLayout({ children }) {
 					</div>
 				</div>
 				{process.env.VERCEL_ENV === 'production' && <Analytics />}
+				{isDraftMode && <VisualEditing />}
 			</body>
 		</html>
 	)
