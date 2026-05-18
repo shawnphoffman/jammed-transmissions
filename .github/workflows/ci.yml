@@ -14,6 +14,13 @@ jobs:
         with:
           node-version: 22
           cache: yarn
+      - name: Configure FontAwesome registry auth
+        env:
+          FA_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
+        run: |
+          echo "@awesome.me:registry=https://npm.fontawesome.com/" >> ~/.npmrc
+          echo "@fortawesome:registry=https://npm.fontawesome.com/" >> ~/.npmrc
+          echo "//npm.fontawesome.com/:_authToken=${FA_TOKEN}" >> ~/.npmrc
       - run: yarn install --frozen-lockfile
       - run: yarn tsc --noEmit
       - run: yarn lint
