@@ -1,12 +1,12 @@
 import { faStarSharp } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
-import { RatingsApple, RatingsGoodpods, RatingsSpotify } from '@shawnphoffman/pod-sites-shared/ratings'
+import { Awards, RatingsApple, RatingsGoodpods, RatingsSpotify } from '@shawnphoffman/pod-sites-shared/ratings'
 import { Suspense } from 'react'
 
-import Awards from '@/components/core/AwardsScrape'
 import LinkCard from '@/components/core/LinkCard'
 import Reviews from '@/components/core/Reviews'
 
 import { getAppleReviews, getSpotifyReviews } from '@/app/actions'
+import { getAwards } from '@/sanity/sanity.requests'
 
 import items, { appleRatingUrl, goodpodsUrl, spotifyUrl } from './links'
 
@@ -41,7 +41,7 @@ export default async function Links() {
 			</div>
 
 			<Suspense>
-				<Awards />
+				<Awards getAwards={getAwards} />
 			</Suspense>
 
 			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
