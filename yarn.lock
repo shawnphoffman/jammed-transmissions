@@ -1070,6 +1070,11 @@
   resolved "https://registry.yarnpkg.com/@sbj42/word-search-generator/-/word-search-generator-0.1.2.tgz#21b4c3c2879fe3b285b21ddaff23da003b81b5e0"
   integrity sha512-Mx5oqvZnDa2EoEvgeznpxpQdah/dw3W58LzwUwE9MIbxs4G17Y6r59DddTB+K9bck3sJYJlAygAjloWpvH88Dg==
 
+"@shawnphoffman/pod-sites-shared@^0.3.0":
+  version "0.3.0"
+  resolved "https://npm.pkg.github.com/download/@shawnphoffman/pod-sites-shared/0.3.0/03f265481effa763a88d09e9b98a861eeb5432d9#03f265481effa763a88d09e9b98a861eeb5432d9"
+  integrity sha512-pgLiE4rEiykJvzmdg8/EyQazOmO3/h4usL6bo63c8Zh3nbTFg1ZAHmnjlO54HzVxng+oShuJz1C9IpSQklBoLA==
+
 "@svta/common-media-library@^0.12.4":
   version "0.12.4"
   resolved "https://registry.yarnpkg.com/@svta/common-media-library/-/common-media-library-0.12.4.tgz#1533e7518e6e36952eab8325f11c4e986cea4d4b"
