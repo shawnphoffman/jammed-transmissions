@@ -918,6 +918,16 @@
     nanoid "^3.3.11"
     rxjs "^7.0.0"
 
+"@sanity/client@^7.22":
+  version "7.22.0"
+  resolved "https://registry.yarnpkg.com/@sanity/client/-/client-7.22.0.tgz#f2d72c1660e7aedbe2de1ed93e7b36b946b21e13"
+  integrity sha512-KqN9cowZwfZNCwCchRaz1B9WrZTThQxX/gfJhJO1uKJBuk/JcbYGBiSK9CSqocWoYDQ/QqANVXy1r7a8zognww==
+  dependencies:
+    "@sanity/eventsource" "^5.0.2"
+    get-it "^8.7.2"
+    nanoid "^3.3.11"
+    rxjs "^7.0.0"
+
 "@sanity/color@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@sanity/color/-/color-3.0.6.tgz#4d1eb69583c9d5ad8d44503cd714d67cc0ae1e86"
@@ -1070,10 +1080,10 @@
   resolved "https://registry.yarnpkg.com/@sbj42/word-search-generator/-/word-search-generator-0.1.2.tgz#21b4c3c2879fe3b285b21ddaff23da003b81b5e0"
   integrity sha512-Mx5oqvZnDa2EoEvgeznpxpQdah/dw3W58LzwUwE9MIbxs4G17Y6r59DddTB+K9bck3sJYJlAygAjloWpvH88Dg==
 
-"@shawnphoffman/pod-sites-shared@^0.5.1":
-  version "0.5.1"
-  resolved "https://npm.pkg.github.com/download/@shawnphoffman/pod-sites-shared/0.5.1/42f3cdd2c162fa135acf3c0e658620a6d7da77b9#42f3cdd2c162fa135acf3c0e658620a6d7da77b9"
-  integrity sha512-wuhGUyU1mwXIWRYdrkTwcMEuanClsZPjmD7FZyUjRx8c/y87ahlUqG2KDvCqApIsZKTee7Py7vJMejuqDAfqvA==
+"@shawnphoffman/pod-sites-shared@^0.6.0-rc.1":
+  version "0.6.0-rc.1"
+  resolved "https://npm.pkg.github.com/download/@shawnphoffman/pod-sites-shared/0.6.0-rc.1/f1d4e93411ef0429548196d3e579f698edcb8697#f1d4e93411ef0429548196d3e579f698edcb8697"
+  integrity sha512-1iNBlnUFtbcS9D2r0apZlbxuOSNBd4n7RekGfjANabvIhXQmlA0N1VvZshTxKqYQsnFM/H/u4rgAVqXtUnT8Aw==
 
 "@svta/common-media-library@^0.12.4":
   version "0.12.4"
@@ -3240,6 +3250,16 @@ get-it@^8.6.7, get-it@^8.6.9:
     "@types/follow-redirects" "^1.14.4"
     decompress-response "^7.0.0"
     follow-redirects "^1.15.9"
+    is-retry-allowed "^2.2.0"
+    through2 "^4.0.2"
+    tunnel-agent "^0.6.0"
+
+get-it@^8.7.2:
+  version "8.7.2"
+  resolved "https://registry.yarnpkg.com/get-it/-/get-it-8.7.2.tgz#a015ff618901f3b751e471774cf4e9015b1a82ba"
+  integrity sha512-slSwC/BBAnoz9OnHopU+V5pJKAieddoF6dmx2CvbWMRePgup8ftiB+D7d+pr2PZzcqNtZOVDMoLOsXGsERhTEg==
+  dependencies:
+    decompress-response "^7.0.0"
     is-retry-allowed "^2.2.0"
     through2 "^4.0.2"
     tunnel-agent "^0.6.0"
