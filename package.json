@@ -11,7 +11,7 @@
 		"@sanity/image-url": "^1.2.0",
 		"@sanity/types": "^4.10.1",
 		"@sbj42/word-search-generator": "^0.1.2",
-		"@shawnphoffman/pod-sites-shared": "^0.6.0-rc.1",
+		"@shawnphoffman/pod-sites-shared": "^0.6.2",
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/speed-insights": "^1.2.0",
 		"classnames": "^2.5.1",
