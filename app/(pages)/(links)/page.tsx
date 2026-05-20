@@ -1,13 +1,14 @@
+import { faStarSharp } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
+import { Awards, RatingsApple, RatingsGoodpods, RatingsSpotify } from '@shawnphoffman/pod-sites-shared/ratings'
 import { Suspense } from 'react'
 
-import Awards from '@/components/core/AwardsScrape'
 import LinkCard from '@/components/core/LinkCard'
-import RatingsApple from '@/components/core/RatingsApple'
-import RatingsGoodpods from '@/components/core/RatingsGoodpods'
-import RatingsSpotify from '@/components/core/RatingsSpotify'
 import Reviews from '@/components/core/Reviews'
 
-import items from './links'
+import { getAppleReviews, getSpotifyReviews } from '@/app/actions'
+import { getAwards } from '@/sanity/sanity.requests'
+
+import items, { appleRatingUrl, goodpodsUrl, spotifyUrl } from './links'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,9 +20,9 @@ export default async function Links() {
 			</div>
 			<div className="flex flex-row flex-wrap items-center justify-center gap-2">
 				<Suspense>
-					<RatingsApple />
-					<RatingsGoodpods />
-					<RatingsSpotify />
+					<RatingsApple appleRatingUrl={appleRatingUrl} getReviews={getAppleReviews} starIcon={faStarSharp} />
+					<RatingsGoodpods goodpodsUrl={goodpodsUrl} starIcon={faStarSharp} />
+					<RatingsSpotify spotifyUrl={spotifyUrl} getReviews={getSpotifyReviews} starIcon={faStarSharp} />
 				</Suspense>
 			</div>
 			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
@@ -40,7 +41,7 @@ export default async function Links() {
 			</div>
 
 			<Suspense>
-				<Awards />
+				<Awards getAwards={getAwards} />
 			</Suspense>
 
 			<div className="flex flex-row flex-wrap justify-center w-full gap-4">

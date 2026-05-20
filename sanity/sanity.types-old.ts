@@ -1,24 +1,9 @@
-export interface Author {
-	name?: string
-	image?: any
-}
+import type {
+	ProjectedAuthor,
+	ProjectedPost,
+	ProjectedSettings,
+} from '@shawnphoffman/pod-sites-shared/sanity'
 
-export interface Post {
-	_id: string
-	_updatedAt?: string
-	title: string
-	slug: string
-	mainImage?: any
-	publishedAt: string
-	author: Author
-	body: any
-	excerpt: string
-}
-
-export interface Settings {
-	title?: string
-	description?: any[]
-	ogImage?: {
-		title?: string
-	}
-}
+export type Author = ProjectedAuthor
+export type Post = ProjectedPost
+export type Settings = ProjectedSettings

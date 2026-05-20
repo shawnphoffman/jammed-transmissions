@@ -34,3 +34,6 @@ yarn-error.log*
 
 # misc
 /misc
+# Local agent state
+.claude/
+tsconfig.tsbuildinfo
