@@ -24,7 +24,9 @@ export async function POST(req: NextRequest) {
 
 		// If the `_type` is `page`, then all `client.fetch` calls with
 		// `{next: {tags: ['page']}}` will be revalidated
-		revalidateTag(body._type, 'max')
+		// expire: 0 drops the cached data at once, so the next visit shows the change;
+		// 'max' served the old page to the first visitor while rebuilding in the background
+		revalidateTag(body._type, { expire: 0 })
 
 		return NextResponse.json({ body })
 	} catch (err) {
